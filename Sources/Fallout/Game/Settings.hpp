@@ -15,9 +15,12 @@ namespace Fallout
             void Size(const Ext::Graphics::Point2u& value);
             const std::string& Title();
             void Title(const std::string& value);
+            const std::string& Root();
+            void Root(const std::string& value);
         private:
             Ext::Graphics::Point2u _Size;
             std::string _Title;
+            std::string _Root;
         };
     }
 }

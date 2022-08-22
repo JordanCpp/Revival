@@ -19,3 +19,13 @@ void Fallout::Game::Settings::Title(const std::string& value)
 {
 	_Title = value;
 }
+
+const std::string& Fallout::Game::Settings::Root()
+{
+	return _Root;
+}
+
+void Fallout::Game::Settings::Root(const std::string& value)
+{
+	_Root = value;
+}
