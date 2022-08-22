@@ -26,7 +26,8 @@ add_library(Ext STATIC
 "Ext/Ext/Formats/TextFile.cpp"
 "Ext/Ext/Managers/PathManager.cpp"
 "Ext/Ext/Managers/ImageManager.cpp"
-"Ext/Ext/Managers/TextFileManager.cpp")
+"Ext/Ext/Managers/TextFileManager.cpp"
+"Ext/Ext/Readers/JsonReader.cpp")
 
 target_link_libraries(Ext SDL2::SDL2 SDL2::SDL2main SDL2::image SDL2::ttf)
 
