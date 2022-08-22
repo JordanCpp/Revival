@@ -11,8 +11,6 @@ if (MSVC)
   include_directories("dependencies/SDL_ttf-main")
 endif()
 
-include_directories("dependencies/rapidjson/include")
-
 include_directories("Ext/")
 
 add_library(Ext STATIC 
