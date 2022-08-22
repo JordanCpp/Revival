@@ -8,22 +8,42 @@ Fallout::Gameplay::StatValue::StatValue() :
 {
 }
 
-int Fallout::Gameplay::StatValue::Value()
+int Fallout::Gameplay::StatValue::Value() const
 {
 	return _Value;
 }
 
-int Fallout::Gameplay::StatValue::Current()
+int Fallout::Gameplay::StatValue::Current() const
 {
 	return _Current;
 }
 
-int Fallout::Gameplay::StatValue::Number()
+int Fallout::Gameplay::StatValue::Number() const
 {
 	return _Number;
 }
 
-int Fallout::Gameplay::StatValue::Percent()
+int Fallout::Gameplay::StatValue::Percent() const
 {
 	return _Percent;
+}
+
+void Fallout::Gameplay::StatValue::Value(int value)
+{
+	_Value = value;
+}
+
+void Fallout::Gameplay::StatValue::Current(int value)
+{
+	_Current = value;
+}
+
+void Fallout::Gameplay::StatValue::Number(int value)
+{
+	_Number = value;
+}
+
+void Fallout::Gameplay::StatValue::Percent(int value)
+{
+	_Percent = value;
 }

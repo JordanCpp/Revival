@@ -9,10 +9,14 @@ namespace Fallout
         {
         public:
             StatValue();
-            int Value();
-            int Current();
-            int Number();
-            int Percent();
+            int Value() const;
+            int Current() const;
+            int Number() const;
+            int Percent() const;
+            void Value(int value);
+            void Current(int value);
+            void Number(int value);
+            void Percent(int value);
         private:
             int _Value;
             int _Current;

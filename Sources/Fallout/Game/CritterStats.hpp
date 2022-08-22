@@ -16,6 +16,12 @@ namespace Fallout
                 Strength,
                 Max
             };
+            int Value(size_t index) const;
+            int Current(size_t index) const;
+            int Number(size_t index) const;
+            int Percent(size_t index) const;
+            int StatValue(size_t index) const;
+            int StatCurrent(size_t index) const;
         private:
             std::array<Fallout::Gameplay::StatValue, Fallout::Game::CritterStats::Max> _Stats;
         };

@@ -11,6 +11,9 @@ namespace Fallout
         class CritterProto
         {
         public:
+            CritterProto(const Fallout::Game::CritterStats& stats, const Fallout::Game::CritterSkills& skills);
+            const Fallout::Game::CritterStats& Stats();
+            const Fallout::Game::CritterSkills& Skills();
         private:
             Fallout::Game::CritterStats _CritterStats;
             Fallout::Game::CritterSkills _CritterSkills;
