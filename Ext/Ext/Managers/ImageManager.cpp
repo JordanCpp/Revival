@@ -1,0 +1,1 @@
+#include <Ext/Managers/ImageManager.hpp>
