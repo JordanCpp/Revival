@@ -20,10 +20,10 @@ add_library(Ext STATIC
 "Ext/Ext/Graphics/Render.cpp"
 "Ext/Ext/Graphics/Painter.cpp"
 "Ext/Ext/Graphics/Image.cpp"
+"Ext/Ext/Graphics/Color.cpp"
 "Ext/Ext/Loaders/ImageLoader.cpp"
 "Ext/Ext/Managers/PathManager.cpp"
-"Ext/Ext/Managers/ImageManager.cpp"
-"Ext/Ext/Graphics/Color.cpp")
+"Ext/Ext/Managers/ImageManager.cpp")
 
 target_link_libraries(Ext SDL2::SDL2 SDL2::SDL2main SDL2::image SDL2::ttf)
 

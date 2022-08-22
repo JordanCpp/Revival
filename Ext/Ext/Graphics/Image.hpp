@@ -12,6 +12,7 @@ namespace Ext
         public:
             Image(SDL_Texture* texture, const Ext::Graphics::Point2u& size);
             SDL_Texture* Get();
+            const Ext::Graphics::Point2u& Size();
         private:
             SDL_Texture* _Texture;
             Ext::Graphics::Point2u _Size;

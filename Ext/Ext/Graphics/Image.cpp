@@ -11,3 +11,8 @@ SDL_Texture* Ext::Graphics::Image::Get()
 {
 	return _Texture;
 }
+
+const Ext::Graphics::Point2u& Ext::Graphics::Image::Size()
+{
+	return _Size;
+}
