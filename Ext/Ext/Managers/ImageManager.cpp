@@ -28,9 +28,7 @@ Ext::Graphics::Image* Ext::Managers::ImageManager::Get(const std::string& dir1, 
         _Images.emplace(path, p);
     }
     else
-    {
         p = i->second;
-    }
 
     return p;
 }

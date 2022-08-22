@@ -1,5 +1,5 @@
-#ifndef Ext_Graphics_ImageLoader_hpp
-#define Ext_Graphics_ImageLoader_hpp
+#ifndef Ext_Loaders_ImageLoader_hpp
+#define Ext_Loaders_ImageLoader_hpp
 
 #include <Ext/Graphics/Color.hpp>
 #include <Ext/Graphics/Image.hpp>
