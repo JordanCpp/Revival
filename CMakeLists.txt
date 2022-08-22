@@ -36,6 +36,10 @@ include_directories("Sources/")
 add_executable(Fallout 
 "Sources/Fallout/main.cpp"
 "Sources/Fallout/Game/Engine.cpp"
-"Sources/Fallout/Game/Settings.cpp")
+"Sources/Fallout/Game/Settings.cpp"
+"Sources/Fallout/Game/CritterStats.cpp"
+"Sources/Fallout/Game/CritterSkills.cpp"
+"Sources/Fallout/Game/CritterProto.cpp"
+"Sources/Fallout/Gameplay/StatValue.cpp")
 
 target_link_libraries(Fallout Ext)

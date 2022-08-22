@@ -1,0 +1,1 @@
+#include <Fallout/Game/CritterSkills.hpp>

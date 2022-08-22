@@ -1,0 +1,32 @@
+{
+  "Stats": {
+    "Strength": 3,
+    "Perception": 7,
+    "Endurance": 4,
+    "Charisma": 2,
+    "Intelligence": 9,
+    "Agility": 8,
+    "Luck": 4
+  },
+  "Skills": {
+    "SmallGuns": 10,
+    "BigGuns": 15,
+    "EnergyWeapons": 20,
+    "Unarmed": 25,
+    "Melee": 30,
+    "Weapons": 10,
+    "Throwing": 10,
+    "FirstAid": 10,
+    "Doctor": 10,
+    "Sneak": 10,
+    "Lockpick": 10,
+    "Steal": 10,
+    "Traps": 10,
+    "Science": 10,
+    "Repair": 10,
+    "Speech": 10,
+    "Barter": 10,
+    "Gambling": 10,
+    "Outdoorsman": 10
+  }
+}
