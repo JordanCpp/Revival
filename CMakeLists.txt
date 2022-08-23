@@ -30,7 +30,8 @@ add_library(Ext STATIC
 "Ext/Ext/Readers/JsonReader.cpp"
 "Ext/Ext/Widgets/Widget.cpp"
 "Ext/Ext/Widgets/Screen.cpp"
-"Ext/Ext/Widgets/Container.cpp")
+"Ext/Ext/Widgets/Container.cpp"
+"Ext/Ext/Widgets/Button.cpp")
 
 target_link_libraries(Ext SDL2::SDL2 SDL2::SDL2main SDL2::image SDL2::ttf)
 

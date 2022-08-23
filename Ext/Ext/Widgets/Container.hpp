@@ -12,6 +12,7 @@ namespace Ext
         {
         public:
             void Attach(Ext::Widgets::Widget* widget);
+            std::vector<Ext::Widgets::Widget*>& Widgets();
         private:
             std::vector<Ext::Widgets::Widget*> _Widgets;
         };
