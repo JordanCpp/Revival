@@ -1,5 +1,9 @@
 #include <Fallout/Game/CritterProto.hpp>
 
+Fallout::Game::CritterProto::CritterProto()
+{
+}
+
 Fallout::Game::CritterProto::CritterProto(const Fallout::Game::CritterStats& stats, const Fallout::Game::CritterSkills& skills) :
 	_CritterStats(stats),
 	_CritterSkills(skills)

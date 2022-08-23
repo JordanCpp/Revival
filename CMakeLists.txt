@@ -41,6 +41,7 @@ add_executable(Fallout
 "Sources/Fallout/Game/CritterStats.cpp"
 "Sources/Fallout/Game/CritterSkills.cpp"
 "Sources/Fallout/Game/CritterProto.cpp"
-"Sources/Fallout/Gameplay/StatValue.cpp")
+"Sources/Fallout/Gameplay/StatValue.cpp"
+"Sources/Fallout/Managers/ProtoManager.cpp")
 
 target_link_libraries(Fallout Ext)

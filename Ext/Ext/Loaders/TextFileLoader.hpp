@@ -11,7 +11,7 @@ namespace Ext
         class TextFileLoader
         {
         public:
-          Ext::Formats::TextFile* Load(const std::string& path);
+            Ext::Formats::TextFile* Load(const std::string& path);
         private:
             std::fstream _Input;
             std::string _Result;
