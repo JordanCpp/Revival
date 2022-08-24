@@ -5,6 +5,11 @@ Fallout::UI::MainMenu::MainMenu(Ext::Managers::WidgetManager* widgetManager, Ext
 	_Application(application)
 {
 	_Screen = _WidgetManager->NewScreen();
+	_Window = _WidgetManager->NewWindow(_Screen->Area().Pos(), _Screen->Area().Size());
+	_Screen->Attach(_Window);
+
+	_NewGame = _WidgetManager->NewButton(Ext::Graphics::Point2u(5, 5), Ext::Graphics::Point2u(145, 35));
+	_Window->Attach(_NewGame);
 
 	_Application->Activate(_Screen);
 }

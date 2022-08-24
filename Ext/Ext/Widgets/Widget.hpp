@@ -3,6 +3,7 @@
 
 #include <Ext/Graphics/Painter.hpp>
 #include <Ext/Graphics/Rect2u.hpp>
+#include <functional>
 
 namespace Ext
 {
@@ -13,6 +14,9 @@ namespace Ext
         public:
             Widget(Ext::Graphics::Painter* painter, const Ext::Graphics::Point2u& pos, const Ext::Graphics::Point2u& size);
             virtual void Draw() = 0;
+            const Ext::Graphics::Rect2u& Area();
+            Ext::Graphics::Painter* Painter();
+            std::function<void(const Ext::Graphics::Point2u& pos)> OnClick;
         private:
             Ext::Graphics::Painter* _Painter;
             Ext::Graphics::Rect2u _Area;

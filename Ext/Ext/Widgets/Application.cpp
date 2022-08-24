@@ -1,3 +1,4 @@
+#include "Application.hpp"
 #include <Ext/Widgets/Application.hpp>
 #include <stdexcept>
 
@@ -12,4 +13,9 @@ void Ext::Widgets::Application::Draw()
 		throw std::runtime_error("Current screen is nullptr!");
 
 	_Screen->Draw();
+}
+
+void Ext::Widgets::Application::Handler(const Ext::Events::Event& event)
+{
+
 }

@@ -16,6 +16,8 @@ namespace Fallout
             Ext::Managers::WidgetManager* _WidgetManager;
             Ext::Widgets::Application* _Application;
             Ext::Widgets::Screen* _Screen;
+            Ext::Widgets::Window* _Window;
+            Ext::Widgets::Button* _NewGame;
         };
     }
 }

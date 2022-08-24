@@ -1,4 +1,5 @@
 #include "Painter.hpp"
+#include "Painter.hpp"
 #include <Ext/Graphics/Painter.hpp>
 #include <stdexcept>
 
@@ -27,7 +28,7 @@ void Ext::Graphics::Painter::Draw(Ext::Graphics::Image* image, const Ext::Graphi
 	Draw(image, pos, image->Size());
 }
 
-void Ext::Graphics::Painter::Rect(const Ext::Graphics::Point2u& pos, const Ext::Graphics::Point2u& size, const Ext::Graphics::Color& color)
+void Ext::Graphics::Painter::Draw(const Ext::Graphics::Point2u& pos, const Ext::Graphics::Point2u& size, const Ext::Graphics::Color& color)
 {
 	SDL_Rect rect;
 
@@ -38,6 +39,19 @@ void Ext::Graphics::Painter::Rect(const Ext::Graphics::Point2u& pos, const Ext::
 
 	SDL_SetRenderDrawColor(_Render->Get(), color.Red(), color.Green(), color.Blue(), color.Alpha());
 	SDL_RenderFillRect(_Render->Get(), &rect);
+}
+
+void Ext::Graphics::Painter::Rect(const Ext::Graphics::Point2u& pos, const Ext::Graphics::Point2u& size, const Ext::Graphics::Color& color)
+{
+	SDL_Rect rect;
+
+	rect.x = pos.PosX();
+	rect.y = pos.PosY();
+	rect.w = size.PosX();
+	rect.h = size.PosY();
+
+	SDL_SetRenderDrawColor(_Render->Get(), color.Red(), color.Green(), color.Blue(), color.Alpha());
+	SDL_RenderDrawRect(_Render->Get(), &rect);
 }
 
 void Ext::Graphics::Painter::Present()

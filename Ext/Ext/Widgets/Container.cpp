@@ -12,4 +12,8 @@ std::vector<Ext::Widgets::Widget*>& Ext::Widgets::Container::Widgets()
 
 void Ext::Widgets::Container::Draw()
 {
+	for (size_t i = 0; i < _Widgets.size(); i++)
+	{
+		_Widgets[i]->Draw();
+	}
 }

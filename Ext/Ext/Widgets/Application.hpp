@@ -2,7 +2,8 @@
 #define Ext_Widgets_Application_hpp
 
 #include <Ext/Widgets/Screen.hpp>
-#include <unordered_map>
+#include <Ext/Events/Event.hpp>
+#include <Ext/Input/MouseInput.hpp>
 
 namespace Ext
 {
@@ -13,7 +14,9 @@ namespace Ext
         public:
             void Activate(Ext::Widgets::Screen* screen);
             void Draw();
+            void Handler(const Ext::Events::Event& event);
         private:
+            Ext::Input::MouseInput _MouseInput;
             Ext::Widgets::Screen* _Screen;
         };
     }

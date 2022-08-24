@@ -15,6 +15,7 @@ namespace Ext
             Painter(Ext::Graphics::Render* render);
             void Draw(Ext::Graphics::Image* image, const Ext::Graphics::Point2u& pos, const Ext::Graphics::Point2u& size);
             void Draw(Ext::Graphics::Image* image, const Ext::Graphics::Point2u& pos);
+            void Draw(const Ext::Graphics::Point2u& pos, const Ext::Graphics::Point2u& size, const Ext::Graphics::Color& color);
             void Rect(const Ext::Graphics::Point2u& pos, const Ext::Graphics::Point2u& size, const Ext::Graphics::Color& color);
             void Present();
             void Clear();

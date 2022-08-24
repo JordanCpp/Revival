@@ -3,6 +3,8 @@
 
 #include <Ext/Graphics/Painter.hpp>
 #include <Ext/Widgets/Screen.hpp>
+#include <Ext/Widgets/Window.hpp>
+#include <Ext/Widgets/Button.hpp>
 
 namespace Ext
 {
@@ -14,6 +16,8 @@ namespace Ext
             WidgetManager(Ext::Graphics::Painter* painter, Ext::Graphics::Window* window);
             ~WidgetManager();
             Ext::Widgets::Screen* NewScreen();
+            Ext::Widgets::Button* NewButton(const Ext::Graphics::Point2u& pos, const Ext::Graphics::Point2u& size);
+            Ext::Widgets::Window* NewWindow(const Ext::Graphics::Point2u& pos, const Ext::Graphics::Point2u& size);
         private:
             Ext::Graphics::Painter* _Painter;
             Ext::Graphics::Window* _Window;

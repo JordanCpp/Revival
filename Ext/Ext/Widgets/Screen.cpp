@@ -14,7 +14,7 @@ void Ext::Widgets::Screen::Attach(Ext::Widgets::Window* window)
 
 void Ext::Widgets::Screen::Draw()
 {
-	_Painter->Rect(Ext::Graphics::Point2u(0, 0), _Window->Size(), Ext::Graphics::Color(195, 195, 195));
+	_Painter->Draw(Ext::Graphics::Point2u(0, 0), _Window->Size(), Ext::Graphics::Color(195, 195, 195));
 
 	_Container.Draw();
 }

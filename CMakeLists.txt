@@ -29,6 +29,7 @@ add_library(Ext STATIC
 "Ext/Ext/Managers/TextFileManager.cpp"
 "Ext/Ext/Managers/WidgetManager.cpp"
 "Ext/Ext/Readers/JsonReader.cpp"
+"Ext/Ext/Input/MouseInput.cpp"
 "Ext/Ext/Widgets/Widget.cpp"
 "Ext/Ext/Widgets/Screen.cpp"
 "Ext/Ext/Widgets/Container.cpp"
