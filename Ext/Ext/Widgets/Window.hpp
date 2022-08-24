@@ -1,17 +1,15 @@
-#ifndef Ext_Widgets_Button_hpp
-#define Ext_Widgets_Button_hpp
+#ifndef Ext_Widgets_Window_hpp
+#define Ext_Widgets_Window_hpp
 
-#include <Ext/Widgets/Widget.hpp>
 #include <Ext/Widgets/Container.hpp>
 
 namespace Ext
 {
     namespace Widgets
     {
-        class Button: public Ext::Widgets::Widget
+        class Window
         {
         public:
-            Button(Ext::Graphics::Painter* painter, const Ext::Graphics::Point2u& pos, const Ext::Graphics::Point2u& size);
             void Attach(Ext::Widgets::Widget* widget);
             void Draw();
         private:

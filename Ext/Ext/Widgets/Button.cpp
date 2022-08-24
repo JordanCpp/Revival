@@ -9,3 +9,7 @@ void Ext::Widgets::Button::Attach(Ext::Widgets::Widget* widget)
 {
 	_Container.Attach(widget);
 }
+
+void Ext::Widgets::Button::Draw()
+{
+}

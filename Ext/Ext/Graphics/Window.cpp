@@ -1,5 +1,6 @@
 #include <Ext/Graphics/Window.hpp>
 #include <stdexcept>
+#include "Window.hpp"
 
 Ext::Graphics::Window::Window(const Ext::Graphics::Point2u& size, const std::string& title) :
 	_Size(size),

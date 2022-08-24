@@ -9,3 +9,7 @@ std::vector<Ext::Widgets::Widget*>& Ext::Widgets::Container::Widgets()
 {
 	return _Widgets;
 }
+
+void Ext::Widgets::Container::Draw()
+{
+}
