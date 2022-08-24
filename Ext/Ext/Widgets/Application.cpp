@@ -23,9 +23,9 @@ void Ext::Widgets::Application::Handler(const Ext::Events::Event& event)
 
 		if (find)
 		{
-			if (find->OnHover)
+			if (find->OnClick)
 			{
-				find->OnHover(Ext::Graphics::Point2u(event.Mouse.PosX, event.Mouse.PosY));
+				find->OnClick(Ext::Graphics::Point2u(event.Mouse.PosX, event.Mouse.PosY));
 			}
 		}
 	}

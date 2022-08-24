@@ -14,7 +14,9 @@ namespace Fallout
         public:
             MainMenu(Ext::Managers::WidgetManager* widgetManager, Ext::Widgets::Application* application, Fallout::Managers::ImageManager* imageManager);
             Ext::Widgets::Screen* Screen();
-            void Hover(const Ext::Graphics::Point2u& pos);
+            void NewGame(const Ext::Graphics::Point2u& pos);
+            void Editor(const Ext::Graphics::Point2u& pos);
+            void Exit(const Ext::Graphics::Point2u& pos);
         private:
             Ext::Managers::WidgetManager* _WidgetManager;
             Ext::Widgets::Application* _Application;
