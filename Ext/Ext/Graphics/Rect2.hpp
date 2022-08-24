@@ -50,6 +50,11 @@ namespace Ext
 				_Size._PosX = x;
 				_Size._PosY = y;
 			}
+
+			bool Contains(const Ext::Graphics::Point2<TYPE>& pos)
+			{
+				return pos.PosX() >= _Pos.PosX() && pos.PosY() >= _Pos.PosY() && pos.PosX() <= _Pos.PosX() + _Size.PosX() && pos.PosY() <= _Pos.PosY() + _Size.PosY();
+			}
 		private:
 			Ext::Graphics::Point2<TYPE> _Pos;
 			Ext::Graphics::Point2<TYPE> _Size;

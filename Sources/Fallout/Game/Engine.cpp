@@ -22,6 +22,7 @@ void Fallout::Game::Engine::Run()
 		if (report.Type == Ext::Events::IsQuit)
 			_Eventer.StopEvent();
 
+		_Application.Handler(report);
 		_Application.Draw();
 
 		_Painter.Present();
