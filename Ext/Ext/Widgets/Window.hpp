@@ -11,6 +11,7 @@ namespace Ext
         {
         public:
             Window(Ext::Graphics::Painter* painter, const Ext::Graphics::Point2u& pos, const Ext::Graphics::Point2u& size);
+            Ext::Widgets::Widget* Contains(const Ext::Graphics::Point2u& pos);
             void Attach(Ext::Widgets::Widget* widget);
             void Draw();
         private:

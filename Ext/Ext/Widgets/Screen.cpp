@@ -1,3 +1,4 @@
+#include "Screen.hpp"
 #include <Ext/Widgets/Screen.hpp>
 
 Ext::Widgets::Screen::Screen(Ext::Graphics::Painter* painter, Ext::Graphics::Window* window) :
@@ -5,6 +6,11 @@ Ext::Widgets::Screen::Screen(Ext::Graphics::Painter* painter, Ext::Graphics::Win
 	_Painter(painter),
 	_Window(window)
 {
+}
+
+Ext::Widgets::Widget* Ext::Widgets::Screen::Contains(const Ext::Graphics::Point2u& pos)
+{
+	return _Container.Contains(pos);
 }
 
 void Ext::Widgets::Screen::Attach(Ext::Widgets::Window* window)

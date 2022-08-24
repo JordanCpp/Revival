@@ -51,7 +51,7 @@ namespace Ext
 				_Size._PosY = y;
 			}
 
-			bool Contains(const Ext::Graphics::Point2<TYPE>& pos)
+			bool Contains(const Ext::Graphics::Point2<TYPE>& pos) const
 			{
 				return pos.PosX() >= _Pos.PosX() && pos.PosY() >= _Pos.PosY() && pos.PosX() <= _Pos.PosX() + _Size.PosX() && pos.PosY() <= _Pos.PosY() + _Size.PosY();
 			}

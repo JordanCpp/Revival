@@ -11,6 +11,7 @@ namespace Ext
         class Container
         {
         public:
+            Ext::Widgets::Widget* Contains(const Ext::Graphics::Point2u& pos);
             void Attach(Ext::Widgets::Widget* widget);
             std::vector<Ext::Widgets::Widget*>& Widgets();
             void Draw();
