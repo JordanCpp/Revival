@@ -5,6 +5,9 @@
 #include <Ext/Graphics/Painter.hpp>
 #include <Ext/Events/Eventer.hpp>
 #include <Fallout/Game/Settings.hpp>
+#include <Ext/Widgets/Application.hpp>
+#include <Ext/Managers/WidgetManager.hpp>
+#include <Fallout/UI/MainMenu.hpp>
 
 namespace Fallout
 {
@@ -22,6 +25,9 @@ namespace Fallout
             Ext::Graphics::Window _Window;
             Ext::Graphics::Render _Render;
             Ext::Graphics::Painter _Painter;
+            Ext::Managers::WidgetManager _WidgetManager;
+            Ext::Widgets::Application _Application;
+            Fallout::UI::MainMenu _MainMenu;
         };
     }
 }

@@ -1,7 +1,9 @@
+#include "WidgetManager.hpp"
 #include <Ext/Managers/WidgetManager.hpp>
 
-Ext::Managers::WidgetManager::WidgetManager(Ext::Graphics::Painter* painter) :
-	_Painter(painter)
+Ext::Managers::WidgetManager::WidgetManager(Ext::Graphics::Painter* painter, Ext::Graphics::Window* window) :
+	_Painter(painter),
+	_Window(window)
 {
 }
 
@@ -11,14 +13,13 @@ Ext::Managers::WidgetManager::~WidgetManager()
 	{
 		delete _Widgets[i];
 	}
+}
 
-	for (size_t i = 0; i < _Windows.size(); i++)
-	{
-		delete _Windows[i];
-	}
+Ext::Widgets::Screen* Ext::Managers::WidgetManager::NewScreen()
+{
+	auto result = new Ext::Widgets::Screen(_Painter, _Window);
 
-	for (size_t i = 0; i < _Screens.size(); i++)
-	{
-		delete _Screens[i];
-	}
+	_Widgets.push_back(result);
+
+	return result;
 }

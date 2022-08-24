@@ -1,20 +1,22 @@
 #ifndef Ext_Widgets_Screen_hpp
 #define Ext_Widgets_Screen_hpp
 
-#include <vector>
 #include <Ext/Widgets/Window.hpp>
 
 namespace Ext
 {
     namespace Widgets
     {
-        class Screen
+        class Screen : public Ext::Widgets::Widget
         {
         public:
+            Screen(Ext::Graphics::Painter* painter, Ext::Graphics::Window* window);
             void Attach(Ext::Widgets::Window* window);
             void Draw();
         private:
-            std::vector<Ext::Widgets::Window*> _Windows;
+            Ext::Graphics::Painter* _Painter;
+            Ext::Graphics::Window* _Window;
+            Ext::Widgets::Container _Container;
         };
     }
 }

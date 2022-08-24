@@ -7,9 +7,10 @@ namespace Ext
 {
     namespace Widgets
     {
-        class Window
+        class Window: public Ext::Widgets::Widget
         {
         public:
+            Window(Ext::Graphics::Painter* painter, const Ext::Graphics::Point2u& pos, const Ext::Graphics::Point2u& size);
             void Attach(Ext::Widgets::Widget* widget);
             void Draw();
         private:

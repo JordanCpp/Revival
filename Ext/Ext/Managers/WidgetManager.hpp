@@ -11,12 +11,12 @@ namespace Ext
         class WidgetManager
         {
         public:
-            WidgetManager(Ext::Graphics::Painter* painter);
+            WidgetManager(Ext::Graphics::Painter* painter, Ext::Graphics::Window* window);
             ~WidgetManager();
+            Ext::Widgets::Screen* NewScreen();
         private:
             Ext::Graphics::Painter* _Painter;
-            std::vector<Ext::Widgets::Window*> _Windows;
-            std::vector<Ext::Widgets::Screen*> _Screens;
+            Ext::Graphics::Window* _Window;
             std::vector<Ext::Widgets::Widget*> _Widgets;
         };
     }

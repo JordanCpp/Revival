@@ -4,7 +4,10 @@ Fallout::Game::Engine::Engine(Fallout::Game::Settings* settings) :
 	_Settings(settings),
 	_Window(_Settings->Size(), _Settings->Title()),
 	_Render(&_Window),
-	_Painter(&_Render)
+	_Painter(&_Render),
+	_WidgetManager(&_Painter, &_Window),
+	_Application(),
+	_MainMenu(&_WidgetManager, &_Application)
 {
 }
 
@@ -18,6 +21,8 @@ void Fallout::Game::Engine::Run()
 
 		if (report.Type == Ext::Events::IsQuit)
 			_Eventer.StopEvent();
+
+		_Application.Draw();
 
 		_Painter.Present();
 	}

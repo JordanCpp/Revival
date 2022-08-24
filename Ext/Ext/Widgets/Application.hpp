@@ -2,6 +2,7 @@
 #define Ext_Widgets_Application_hpp
 
 #include <Ext/Widgets/Screen.hpp>
+#include <unordered_map>
 
 namespace Ext
 {
@@ -10,8 +11,10 @@ namespace Ext
         class Application
         {
         public:
+            void Activate(Ext::Widgets::Screen* screen);
+            void Draw();
         private:
-            std::vector<Ext::Widgets::Screen*> _Screens;
+            Ext::Widgets::Screen* _Screen;
         };
     }
 }
