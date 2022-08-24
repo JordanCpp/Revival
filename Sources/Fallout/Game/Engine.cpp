@@ -9,6 +9,7 @@ Fallout::Game::Engine::Engine(Fallout::Game::Settings* settings) :
 	_Application(),
 	_MainMenu(&_WidgetManager, &_Application)
 {
+	_Application.Activate(_MainMenu.Screen());
 }
 
 void Fallout::Game::Engine::Run()

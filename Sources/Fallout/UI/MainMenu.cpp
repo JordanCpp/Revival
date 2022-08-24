@@ -10,6 +10,9 @@ Fallout::UI::MainMenu::MainMenu(Ext::Managers::WidgetManager* widgetManager, Ext
 
 	_NewGame = _WidgetManager->NewButton(Ext::Graphics::Point2u(5, 5), Ext::Graphics::Point2u(145, 35));
 	_Window->Attach(_NewGame);
+}
 
-	_Application->Activate(_Screen);
+Ext::Widgets::Screen* Fallout::UI::MainMenu::Screen()
+{
+	return _Screen;
 }

@@ -12,6 +12,7 @@ namespace Fallout
         {
         public:
             MainMenu(Ext::Managers::WidgetManager* widgetManager, Ext::Widgets::Application* application);
+            Ext::Widgets::Screen* Screen();
         private:
             Ext::Managers::WidgetManager* _WidgetManager;
             Ext::Widgets::Application* _Application;
