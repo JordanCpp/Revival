@@ -11,7 +11,7 @@ namespace Fallout
         {
         public:
             ImageManager(Ext::Managers::ImageManager* imageManager);
-            Ext::Graphics::Image* Get(const std::string& file);
+            Ext::Graphics::Image* Interface(const std::string& file);
         private:
             Ext::Managers::ImageManager* _ImageManager;
         };

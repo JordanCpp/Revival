@@ -9,7 +9,8 @@ namespace Ext
 		{
 			IsQuit = 1,
 			IsMouseMove,
-			IsMouseClick
+			IsMouseDown,
+			IsMouseUp
 		};
 
 		class Quit
@@ -24,14 +25,14 @@ namespace Ext
 		public:
 			enum
 			{
-				ButtonLeft,
-				ButtonRight
+				Left,
+				Right
 			};
 
 			enum
 			{
-				StateUp,
-				StateDown
+				Up,
+				Down
 			};
 
 			size_t Type;

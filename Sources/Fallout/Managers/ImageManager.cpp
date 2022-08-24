@@ -5,7 +5,7 @@ Fallout::Managers::ImageManager::ImageManager(Ext::Managers::ImageManager* image
 {
 }
 
-Ext::Graphics::Image* Fallout::Managers::ImageManager::Get(const std::string& file)
+Ext::Graphics::Image* Fallout::Managers::ImageManager::Interface(const std::string& file)
 {
 	return _ImageManager->Get("Images/", "Intefaces/", file);
 }

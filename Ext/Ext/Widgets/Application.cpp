@@ -17,5 +17,16 @@ void Ext::Widgets::Application::Draw()
 
 void Ext::Widgets::Application::Handler(const Ext::Events::Event& event)
 {
+	if (event.Type == Ext::Events::IsMouseDown)
+	{
+		auto find = _Screen->Contains(Ext::Graphics::Point2u(_MouseInput.Pos()));
 
+		if (find)
+		{
+			if (find->OnHover)
+			{
+				find->OnHover(Ext::Graphics::Point2u(event.Mouse.PosX, event.Mouse.PosY));
+			}
+		}
+	}
 }

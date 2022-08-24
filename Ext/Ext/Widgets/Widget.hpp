@@ -17,6 +17,7 @@ namespace Ext
             const Ext::Graphics::Rect2u& Area();
             Ext::Graphics::Painter* Painter();
             std::function<void(const Ext::Graphics::Point2u& pos)> OnClick;
+            std::function<void(const Ext::Graphics::Point2u& pos)> OnHover;
         private:
             Ext::Graphics::Painter* _Painter;
             Ext::Graphics::Rect2u _Area;

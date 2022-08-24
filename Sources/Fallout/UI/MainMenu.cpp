@@ -1,4 +1,5 @@
 #include <Fallout/UI/MainMenu.hpp>
+#include <iostream>
 
 Fallout::UI::MainMenu::MainMenu(Ext::Managers::WidgetManager* widgetManager, Ext::Widgets::Application* application, Fallout::Managers::ImageManager* imageManager) :
 	_WidgetManager(widgetManager),
@@ -7,10 +8,11 @@ Fallout::UI::MainMenu::MainMenu(Ext::Managers::WidgetManager* widgetManager, Ext
 {
 	_Screen = _WidgetManager->NewScreen();
 	_Window = _WidgetManager->NewImageWindow(_Screen->Area().Pos(), _Screen->Area().Size());
-	_Window->Body(_ImageManager->Get("MainMenu.jpg"));
+	_Window->Body(_ImageManager->Interface("MainMenu.jpg"));
 	_Screen->Attach(_Window);
 
 	_NewGame = _WidgetManager->NewButton(Ext::Graphics::Point2u(5, 5), Ext::Graphics::Point2u(145, 35));
+	_NewGame->OnHover = std::bind(&MainMenu::Hover, this, std::placeholders::_1);
 	_Window->Attach(_NewGame);
 
 	_Editor = _WidgetManager->NewButton(Ext::Graphics::Point2u(5, 45), Ext::Graphics::Point2u(145, 35));
@@ -23,4 +25,9 @@ Fallout::UI::MainMenu::MainMenu(Ext::Managers::WidgetManager* widgetManager, Ext
 Ext::Widgets::Screen* Fallout::UI::MainMenu::Screen()
 {
 	return _Screen;
+}
+
+void Fallout::UI::MainMenu::Hover(const Ext::Graphics::Point2u& pos)
+{
+	std::cout << "sdsdsdsd" << '\n';
 }
