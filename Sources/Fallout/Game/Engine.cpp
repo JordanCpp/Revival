@@ -7,7 +7,11 @@ Fallout::Game::Engine::Engine(Fallout::Game::Settings* settings) :
 	_Painter(&_Render),
 	_WidgetManager(&_Painter, &_Window),
 	_Application(),
-	_MainMenu(&_WidgetManager, &_Application)
+	_ImageLoader(&_Render, Ext::Graphics::Color(255, 255, 255)),
+	_PathManager(_Settings->Root()),
+	_ImageManager(&_PathManager, &_ImageLoader),
+	_GameImageManager(&_ImageManager),
+	_MainMenu(&_WidgetManager, &_Application, &_GameImageManager)
 {
 	_Application.Activate(_MainMenu.Screen());
 }

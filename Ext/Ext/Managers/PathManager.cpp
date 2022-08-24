@@ -9,6 +9,7 @@ const std::string& Ext::Managers::PathManager::Path(const std::string& dir1, con
 {
 	_Path.clear();
 
+	_Path += _Root;
 	_Path += dir1;
 	_Path += dir2;
 	_Path += dir3;

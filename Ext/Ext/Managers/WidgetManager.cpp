@@ -1,6 +1,7 @@
 #include "WidgetManager.hpp"
 #include "WidgetManager.hpp"
 #include "WidgetManager.hpp"
+#include "WidgetManager.hpp"
 #include <Ext/Managers/WidgetManager.hpp>
 
 Ext::Managers::WidgetManager::WidgetManager(Ext::Graphics::Painter* painter, Ext::Graphics::Window* window) :
@@ -38,6 +39,15 @@ Ext::Widgets::Button* Ext::Managers::WidgetManager::NewButton(const Ext::Graphic
 Ext::Widgets::Window* Ext::Managers::WidgetManager::NewWindow(const Ext::Graphics::Point2u& pos, const Ext::Graphics::Point2u& size)
 {
 	auto result = new Ext::Widgets::Window(_Painter, pos, size);
+
+	_Widgets.push_back(result);
+
+	return result;
+}
+
+Ext::Widgets::ImageWindow* Ext::Managers::WidgetManager::NewImageWindow(const Ext::Graphics::Point2u& pos, const Ext::Graphics::Point2u& size)
+{
+	auto result = new Ext::Widgets::ImageWindow(_Painter, pos, size);
 
 	_Widgets.push_back(result);
 

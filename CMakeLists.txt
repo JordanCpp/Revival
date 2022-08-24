@@ -35,7 +35,8 @@ add_library(Ext STATIC
 "Ext/Ext/Widgets/Container.cpp"
 "Ext/Ext/Widgets/Button.cpp" 
 "Ext/Ext/Widgets/Window.cpp"
-"Ext/Ext/Widgets/Application.cpp")
+"Ext/Ext/Widgets/Application.cpp"
+"Ext/Ext/Widgets/ImageWindow.cpp")
 
 target_link_libraries(Ext SDL2::SDL2 SDL2::SDL2main SDL2::image SDL2::ttf)
 
@@ -51,6 +52,7 @@ add_executable(Fallout
 "Sources/Fallout/Game/CritterProto.cpp"
 "Sources/Fallout/Gameplay/StatValue.cpp"
 "Sources/Fallout/Managers/ProtoManager.cpp" 
+"Sources/Fallout/Managers/ImageManager.cpp" 
 "Sources/Fallout/UI/MainMenu.cpp")
 
 target_link_libraries(Fallout Ext)

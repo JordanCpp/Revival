@@ -3,6 +3,7 @@
 
 #include <Ext/Widgets/Application.hpp>
 #include <Ext/Managers/WidgetManager.hpp>
+#include <Fallout/Managers/ImageManager.hpp>
 
 namespace Fallout
 {
@@ -11,14 +12,17 @@ namespace Fallout
         class MainMenu
         {
         public:
-            MainMenu(Ext::Managers::WidgetManager* widgetManager, Ext::Widgets::Application* application);
+            MainMenu(Ext::Managers::WidgetManager* widgetManager, Ext::Widgets::Application* application, Fallout::Managers::ImageManager* imageManager);
             Ext::Widgets::Screen* Screen();
         private:
             Ext::Managers::WidgetManager* _WidgetManager;
             Ext::Widgets::Application* _Application;
+            Fallout::Managers::ImageManager* _ImageManager;
             Ext::Widgets::Screen* _Screen;
-            Ext::Widgets::Window* _Window;
+            Ext::Widgets::ImageWindow* _Window;
             Ext::Widgets::Button* _NewGame;
+            Ext::Widgets::Button* _Editor;
+            Ext::Widgets::Button* _Exit;
         };
     }
 }

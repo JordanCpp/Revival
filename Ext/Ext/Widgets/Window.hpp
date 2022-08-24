@@ -13,6 +13,7 @@ namespace Ext
             Window(Ext::Graphics::Painter* painter, const Ext::Graphics::Point2u& pos, const Ext::Graphics::Point2u& size);
             Ext::Widgets::Widget* Contains(const Ext::Graphics::Point2u& pos);
             void Attach(Ext::Widgets::Widget* widget);
+            void DrawWidgets();
             void Draw();
         private:
             Ext::Widgets::Container _Container;

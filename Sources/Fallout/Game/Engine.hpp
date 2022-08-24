@@ -8,6 +8,7 @@
 #include <Ext/Widgets/Application.hpp>
 #include <Ext/Managers/WidgetManager.hpp>
 #include <Fallout/UI/MainMenu.hpp>
+#include <Fallout/Managers/ImageManager.hpp>
 
 namespace Fallout
 {
@@ -27,6 +28,10 @@ namespace Fallout
             Ext::Graphics::Painter _Painter;
             Ext::Managers::WidgetManager _WidgetManager;
             Ext::Widgets::Application _Application;
+            Ext::Loaders::ImageLoader _ImageLoader;
+            Ext::Managers::PathManager _PathManager;
+            Ext::Managers::ImageManager _ImageManager;
+            Fallout::Managers::ImageManager _GameImageManager;
             Fallout::UI::MainMenu _MainMenu;
         };
     }
