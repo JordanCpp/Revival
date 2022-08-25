@@ -26,6 +26,7 @@ add_library(Ext STATIC
 "Ext/Ext/Loaders/ImageLoader.cpp"
 "Ext/Ext/Loaders/TextFileLoader.cpp"
 "Ext/Ext/Loaders/FontLoader.cpp"
+"Ext/Ext/Loaders/TextLoader.cpp"
 "Ext/Ext/Formats/TextFile.cpp"
 "Ext/Ext/Managers/PathManager.cpp"
 "Ext/Ext/Managers/ImageManager.cpp"

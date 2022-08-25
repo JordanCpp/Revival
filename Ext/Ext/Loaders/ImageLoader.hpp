@@ -13,6 +13,7 @@ namespace Ext
         public:
             ImageLoader(Ext::Graphics::Render* render, const Ext::Graphics::Color& transparency);
             Ext::Graphics::Image* Load(const std::string& path);
+            Ext::Graphics::Image* Load(SDL_Surface * surface);
         private:
             Ext::Graphics::Render* _Render;
             Ext::Graphics::Color _Transparency;
