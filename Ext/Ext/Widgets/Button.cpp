@@ -13,9 +13,12 @@ void Ext::Widgets::Button::Attach(Ext::Widgets::Widget* widget)
 void Ext::Widgets::Button::Draw()
 {
 	if (State() == Ext::Widgets::Widget::Normal)
-		Painter()->Draw(Area().Pos(), Area().Size(), Ext::Graphics::Color(127, 127, 127));
+		Painter()->Draw(Area().Pos(), Area().Size(), Ext::Graphics::Color(194, 194, 194));
 	else if (State() == Ext::Widgets::Widget::Hover)
-		Painter()->Draw(Area().Pos(), Area().Size(), Ext::Graphics::Color(255, 0, 0));
-	else 
-		Painter()->Draw(Area().Pos(), Area().Size(), Ext::Graphics::Color(0, 162, 232));
+	{
+		Painter()->Draw(Area().Pos(), Area().Size(), Ext::Graphics::Color(194, 194, 194));
+		Painter()->Rect(Area().Pos(), Area().Size(), Ext::Graphics::Color(116, 116, 116));
+	}
+	else
+		Painter()->Draw(Area().Pos(), Area().Size(), Ext::Graphics::Color(153, 153, 153));
 }
