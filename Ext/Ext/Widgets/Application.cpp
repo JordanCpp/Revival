@@ -19,14 +19,22 @@ void Ext::Widgets::Application::Handler(const Ext::Events::Event& event)
 {
 	if (event.Type == Ext::Events::IsMouseDown)
 	{
-		auto find = _Screen->Contains(Ext::Graphics::Point2u(_MouseInput.Pos()));
+		if (_Current)
+			_Current->State(Widget::Normal);
+		
+		_Current = _Screen->Contains(Ext::Graphics::Point2u(_MouseInput.Pos()));
 
-		if (find)
+		if (_Current)
 		{
-			if (find->OnClick)
-			{
-				find->OnClick(Ext::Graphics::Point2u(_MouseInput.Pos()));
-			}
+			_Current->State(Widget::Down);
+
+			if (_Current->OnClick)
+				_Current->OnClick(_MouseInput.Pos());
+		}
+		else
+		{
+			if (_Screen->OnClick)
+				_Screen->OnClick(_MouseInput.Pos());
 		}
 	}
 	else if (event.Type == Ext::Events::IsMouseMove)

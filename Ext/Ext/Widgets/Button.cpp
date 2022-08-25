@@ -14,6 +14,8 @@ void Ext::Widgets::Button::Draw()
 {
 	if (State() == Ext::Widgets::Widget::Normal)
 		Painter()->Draw(Area().Pos(), Area().Size(), Ext::Graphics::Color(127, 127, 127));
-	else
+	else if (State() == Ext::Widgets::Widget::Hover)
 		Painter()->Draw(Area().Pos(), Area().Size(), Ext::Graphics::Color(255, 0, 0));
+	else 
+		Painter()->Draw(Area().Pos(), Area().Size(), Ext::Graphics::Color(0, 162, 232));
 }
