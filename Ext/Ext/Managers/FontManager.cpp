@@ -24,7 +24,7 @@ Ext::Graphics::Font* Ext::Managers::FontManager::Get(const std::string& dir1, co
 
     if (i == _Fonts.end())
     {
-        p = _FontLoader->Load(path, 12);
+        p = _FontLoader->Load(path, 20);
         _Fonts.emplace(path, p);
     }
     else

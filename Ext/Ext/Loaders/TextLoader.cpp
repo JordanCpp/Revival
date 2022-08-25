@@ -7,6 +7,11 @@ Ext::Loaders::TextLoader::TextLoader(Ext::Loaders::ImageLoader* imageLoader, Ext
     _Font(font),
     _Color(color)
 {
+    if (!_ImageLoader)
+        throw std::runtime_error("_ImageLoader is null");
+
+    if (!_Font)
+        throw std::runtime_error("_Font is null");
 }
 
 Ext::Graphics::Text* Ext::Loaders::TextLoader::Load(const std::string& text)
@@ -18,14 +23,14 @@ Ext::Graphics::Text* Ext::Loaders::TextLoader::Load(const std::string& text)
     color.b = _Color.Blue();
     color.a = _Color.Alpha();
 
-    SDL_Surface* surface = TTF_RenderUTF8_Blended(_Font->Get(), text.c_str(), color);
+    SDL_Surface* surface = TTF_RenderUTF8_Solid(_Font->Get(), text.c_str(), color);
 
     if (!surface)
         throw std::runtime_error("TTF_RenderUTF8_Blended: " + text);
 
    Ext::Graphics::Image * image = _ImageLoader->Load(surface);
 
-   SDL_FreeSurface(surface);
+   //SDL_FreeSurface(surface);
 
    return new Ext::Graphics::Text(image);
 }

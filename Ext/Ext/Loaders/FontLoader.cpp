@@ -8,8 +8,5 @@ Ext::Graphics::Font* Ext::Loaders::FontLoader::Load(const std::string& path, siz
 	if (!font)
 		throw std::runtime_error("Not loading font:" + path);
 
-
-	TTF_CloseFont(font);
-
 	return new Ext::Graphics::Font(font, size);
 }

@@ -9,6 +9,8 @@
 #include <Ext/Managers/WidgetManager.hpp>
 #include <Fallout/UI/MainMenu.hpp>
 #include <Fallout/Managers/ImageManager.hpp>
+#include <Ext/Managers/FontManager.hpp>
+#include <Ext/Managers/TextManager.hpp>
 
 namespace Fallout
 {
@@ -20,8 +22,8 @@ namespace Fallout
             Engine(Fallout::Game::Settings* settings);
             void Run();
         private:
-            Fallout::Game::Settings* _Settings;
             Ext::Core::Initializer _Initializer;
+            Fallout::Game::Settings* _Settings;
             Ext::Events::Eventer _Eventer;
             Ext::Graphics::Window _Window;
             Ext::Graphics::Render _Render;
@@ -32,6 +34,12 @@ namespace Fallout
             Ext::Managers::PathManager _PathManager;
             Ext::Managers::ImageManager _ImageManager;
             Fallout::Managers::ImageManager _GameImageManager;
+            Ext::Loaders::FontLoader _FontLoader;
+            Ext::Managers::FontManager _FontManager;
+            Ext::Loaders::TextLoader _TextLoader;
+            Ext::Managers::TextManager _TextManager;
+
+
             Fallout::UI::MainMenu _MainMenu;
         };
     }

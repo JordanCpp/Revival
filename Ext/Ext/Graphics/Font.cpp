@@ -1,9 +1,15 @@
+#include "Font.hpp"
 #include <Ext/Graphics/Font.hpp>
 
 Ext::Graphics::Font::Font(TTF_Font* font, size_t size) :
-	_Size(0),
+	_Size(size),
 	_Font(font)
 {
+}
+
+Ext::Graphics::Font::~Font()
+{
+	TTF_CloseFont(_Font);
 }
 
 TTF_Font* Ext::Graphics::Font::Get()

@@ -12,6 +12,7 @@ namespace Ext
 		{
 		public:
 			Font(TTF_Font*, size_t size);
+			~Font();
 			TTF_Font* Get();
 			size_t Size();
 		private:
