@@ -1,0 +1,24 @@
+#ifndef Ext_Graphics_Font_hpp
+#define Ext_Graphics_Font_hpp
+
+#include <SDL_ttf.h>
+#include <string>
+
+namespace Ext
+{
+	namespace Graphics
+	{
+		class Font
+		{
+		public:
+			Font(const std::string & path, size_t size);
+			TTF_Font* Get();
+			size_t Size();
+		private:
+			size_t _Size;
+			TTF_Font* _Font;
+		};
+	}
+}
+
+#endif    

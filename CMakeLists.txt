@@ -21,6 +21,7 @@ add_library(Ext STATIC
 "Ext/Ext/Graphics/Painter.cpp"
 "Ext/Ext/Graphics/Image.cpp"
 "Ext/Ext/Graphics/Color.cpp"
+"Ext/Ext/Graphics/Font.cpp"
 "Ext/Ext/Loaders/ImageLoader.cpp"
 "Ext/Ext/Loaders/TextFileLoader.cpp"
 "Ext/Ext/Formats/TextFile.cpp"
