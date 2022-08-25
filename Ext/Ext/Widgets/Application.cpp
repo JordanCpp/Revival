@@ -25,22 +25,18 @@ void Ext::Widgets::Application::Handler(const Ext::Events::Event& event)
 		{
 			if (find->OnClick)
 			{
-				find->OnClick(Ext::Graphics::Point2u(event.Mouse.PosX, event.Mouse.PosY));
+				find->OnClick(Ext::Graphics::Point2u(_MouseInput.Pos()));
 			}
 		}
 	}
 	else if (event.Type == Ext::Events::IsMouseMove)
 	{
-		auto find = _Screen->Contains(Ext::Graphics::Point2u(_MouseInput.Pos()));
+		if (_Current)
+			_Current->State(Widget::Normal);
 
-		if (find)
-		{
-			find->State(Ext::Widgets::Widget::Hover);
+		_Current = _Screen->Contains(Ext::Graphics::Point2u(_MouseInput.Pos()));
 
-			if (find->OnHover)
-			{
-				find->OnHover(Ext::Graphics::Point2u(event.Mouse.PosX, event.Mouse.PosY));
-			}
-		}
+		if (_Current)
+			_Current->State(Widget::Hover);
 	}
 }

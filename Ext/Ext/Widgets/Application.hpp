@@ -18,6 +18,7 @@ namespace Ext
         private:
             Ext::Input::MouseInput _MouseInput;
             Ext::Widgets::Screen* _Screen;
+            Ext::Widgets::Widget* _Current;
         };
     }
 }
