@@ -1,5 +1,7 @@
 #include "Painter.hpp"
 #include "Painter.hpp"
+#include "Painter.hpp"
+#include "Painter.hpp"
 #include <Ext/Graphics/Painter.hpp>
 #include <stdexcept>
 
@@ -26,6 +28,16 @@ void Ext::Graphics::Painter::Draw(Ext::Graphics::Image* image, const Ext::Graphi
 void Ext::Graphics::Painter::Draw(Ext::Graphics::Image* image, const Ext::Graphics::Point2u& pos)
 {
 	Draw(image, pos, image->Size());
+}
+
+void Ext::Graphics::Painter::Draw(Ext::Graphics::Text* text, const Ext::Graphics::Point2u& pos, const Ext::Graphics::Point2u& size)
+{
+	Draw(text->Get(), pos, size);
+}
+
+void Ext::Graphics::Painter::Draw(Ext::Graphics::Text* text, const Ext::Graphics::Point2u& pos)
+{
+	Draw(text->Get(), pos, text->Get()->Size());
 }
 
 void Ext::Graphics::Painter::Draw(const Ext::Graphics::Point2u& pos, const Ext::Graphics::Point2u& size, const Ext::Graphics::Color& color)
