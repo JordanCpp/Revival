@@ -11,6 +11,7 @@ namespace Ext
         {
         public:
             Text(Ext::Graphics::Image* image);
+            const Ext::Graphics::Point2u& Size();
             Ext::Graphics::Image* Get();
         private:
             Ext::Graphics::Image* _Image;

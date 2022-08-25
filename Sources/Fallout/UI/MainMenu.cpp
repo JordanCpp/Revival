@@ -11,15 +11,15 @@ Fallout::UI::MainMenu::MainMenu(Ext::Managers::WidgetManager* widgetManager, Ext
 	_Window->Body(_ImageManager->Interface("MainMenu.jpg"));
 	_Screen->Attach(_Window);
 
-	_NewGame = _WidgetManager->NewButton(Ext::Graphics::Point2u(5, 5), Ext::Graphics::Point2u(145, 35));
+	_NewGame = _WidgetManager->NewButton("New game", Ext::Graphics::Point2u(5, 5), Ext::Graphics::Point2u(145, 35));
 	_NewGame->OnClick = std::bind(&MainMenu::NewGame, this, std::placeholders::_1);
 	_Window->Attach(_NewGame);
 
-	_Editor = _WidgetManager->NewButton(Ext::Graphics::Point2u(5, 45), Ext::Graphics::Point2u(145, 35));
+	_Editor = _WidgetManager->NewButton("Editor", Ext::Graphics::Point2u(5, 45), Ext::Graphics::Point2u(145, 35));
 	_Editor->OnClick = std::bind(&MainMenu::Editor, this, std::placeholders::_1);
 	_Window->Attach(_Editor);
 
-	_Exit = _WidgetManager->NewButton(Ext::Graphics::Point2u(5, 85), Ext::Graphics::Point2u(145, 35));
+	_Exit = _WidgetManager->NewButton("Exit", Ext::Graphics::Point2u(5, 85), Ext::Graphics::Point2u(145, 35));
 	_Exit->OnClick = std::bind(&MainMenu::Exit, this, std::placeholders::_1);
 	_Window->Attach(_Exit);
 }

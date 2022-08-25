@@ -4,9 +4,10 @@
 #include "WidgetManager.hpp"
 #include <Ext/Managers/WidgetManager.hpp>
 
-Ext::Managers::WidgetManager::WidgetManager(Ext::Graphics::Painter* painter, Ext::Graphics::Window* window) :
+Ext::Managers::WidgetManager::WidgetManager(Ext::Graphics::Painter* painter, Ext::Graphics::Window* window, Ext::Managers::TextManager* textManager) :
 	_Painter(painter),
-	_Window(window)
+	_Window(window),
+	_TextManager(textManager)
 {
 }
 
@@ -27,9 +28,9 @@ Ext::Widgets::Screen* Ext::Managers::WidgetManager::NewScreen()
 	return result;
 }
 
-Ext::Widgets::Button* Ext::Managers::WidgetManager::NewButton(const Ext::Graphics::Point2u& pos, const Ext::Graphics::Point2u& size)
+Ext::Widgets::Button* Ext::Managers::WidgetManager::NewButton(const std::string& caption, const Ext::Graphics::Point2u& pos, const Ext::Graphics::Point2u& size)
 {
-	auto result = new Ext::Widgets::Button(_Painter, pos, size);
+	auto result = new Ext::Widgets::Button(_Painter, _TextManager, caption, pos, size);
 
 	_Widgets.push_back(result);
 
