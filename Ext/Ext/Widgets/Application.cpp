@@ -29,4 +29,18 @@ void Ext::Widgets::Application::Handler(const Ext::Events::Event& event)
 			}
 		}
 	}
+	else if (event.Type == Ext::Events::IsMouseMove)
+	{
+		auto find = _Screen->Contains(Ext::Graphics::Point2u(_MouseInput.Pos()));
+
+		if (find)
+		{
+			find->State(Ext::Widgets::Widget::Hover);
+
+			if (find->OnHover)
+			{
+				find->OnHover(Ext::Graphics::Point2u(event.Mouse.PosX, event.Mouse.PosY));
+			}
+		}
+	}
 }

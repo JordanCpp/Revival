@@ -12,5 +12,8 @@ void Ext::Widgets::Button::Attach(Ext::Widgets::Widget* widget)
 
 void Ext::Widgets::Button::Draw()
 {
-	Painter()->Draw(Area().Pos(), Area().Size(), Ext::Graphics::Color(127, 127, 127));
+	if (State() == Ext::Widgets::Widget::Normal)
+		Painter()->Draw(Area().Pos(), Area().Size(), Ext::Graphics::Color(127, 127, 127));
+	else
+		Painter()->Draw(Area().Pos(), Area().Size(), Ext::Graphics::Color(255, 0, 0));
 }
