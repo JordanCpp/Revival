@@ -11,7 +11,7 @@ namespace Ext
 		class Font
 		{
 		public:
-			Font(const std::string & path, size_t size);
+			Font(TTF_Font*, size_t size);
 			TTF_Font* Get();
 			size_t Size();
 		private:
