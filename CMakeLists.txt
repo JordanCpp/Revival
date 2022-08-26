@@ -1,15 +1,17 @@
-cmake_minimum_required(VERSION 2.4)
+cmake_minimum_required(VERSION 3.7)
 
 project(Ext)
 
 if (MSVC)
   add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/utf-8>")
-  add_subdirectory("dependencies/SDL2-2.0.22")
-  include_directories("dependencies/SDL2-2.0.22/include")
-  add_subdirectory("dependencies/SDL_image-release-2.6.2")
-  include_directories("dependencies/SDL_image-release-2.6.2")
-  add_subdirectory("dependencies/SDL_ttf-release-2.20.1")
-  include_directories("dependencies/SDL_ttf-release-2.20.1")
+
+  link_directories("dependencies/SDL2-2.24.0/lib/x86/"
+                   "dependencies/SDL2_image-2.6.2/lib/x86"
+                   "dependencies/SDL2_ttf-2.20.1/lib/x86")
+
+  include_directories("dependencies/SDL2-2.24.0/include"
+                      "dependencies/SDL2_image-2.6.2/include"
+                      "dependencies/SDL2_ttf-2.20.1/include")
 endif()
 
 include_directories("Ext/")
@@ -48,7 +50,7 @@ add_library(Ext STATIC
 "Ext/Ext/Widgets/Application.cpp"
 "Ext/Ext/Widgets/ImageWindow.cpp")
 
-target_link_libraries(Ext SDL2::SDL2 SDL2::SDL2main SDL2::image SDL2::ttf)
+target_link_libraries(Ext SDL2main SDL2 SDL2_image SDL2_ttf)
 
 include_directories("Sources/")
 
