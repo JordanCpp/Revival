@@ -1,6 +1,6 @@
 #include <Ext/Loaders/TextLoader.hpp>
 #include <SDL_ttf.h>
-#include <stdexcept>
+#include <Ext/Core/RuntimeError.hpp>
 
 Ext::Loaders::TextLoader::TextLoader(Ext::Loaders::ImageLoader* imageLoader, Ext::Graphics::Font* font, const Ext::Graphics::Color& color) :
     _ImageLoader(imageLoader),
@@ -8,10 +8,10 @@ Ext::Loaders::TextLoader::TextLoader(Ext::Loaders::ImageLoader* imageLoader, Ext
     _Color(color)
 {
     if (!_ImageLoader)
-        throw std::runtime_error("_ImageLoader is null");
+        throw Ext::Core::RuntimeError("_ImageLoader is null");
 
     if (!_Font)
-        throw std::runtime_error("_Font is null");
+        throw Ext::Core::RuntimeError("_Font is null");
 }
 
 Ext::Graphics::Text* Ext::Loaders::TextLoader::Load(const std::string& text)
@@ -26,7 +26,7 @@ Ext::Graphics::Text* Ext::Loaders::TextLoader::Load(const std::string& text)
     SDL_Surface* surface = TTF_RenderUTF8_Solid(_Font->Get(), text.c_str(), color);
 
     if (!surface)
-        throw std::runtime_error("TTF_RenderUTF8_Blended: " + text);
+        throw Ext::Core::RuntimeError("TTF_RenderUTF8_Blended: " + text);
 
    Ext::Graphics::Image * image = _ImageLoader->Load(surface);
 

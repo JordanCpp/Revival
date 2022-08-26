@@ -1,6 +1,5 @@
 #include <Ext/Graphics/Window.hpp>
-#include <stdexcept>
-#include "Window.hpp"
+#include <Ext/Core/RuntimeError.hpp>
 
 Ext::Graphics::Window::Window(const Ext::Graphics::Point2u& size, const std::string& title) :
 	_Size(size),
@@ -10,7 +9,7 @@ Ext::Graphics::Window::Window(const Ext::Graphics::Point2u& size, const std::str
 	_Window = SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, (int)size.PosX(), (int)size.PosY(), SDL_WINDOW_OPENGL);
 
 	if (!_Window)
-		throw std::runtime_error(SDL_GetError());
+		throw Ext::Core::RuntimeError(SDL_GetError());
 }
 
 SDL_Window* Ext::Graphics::Window::Get()

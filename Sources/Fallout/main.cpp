@@ -1,6 +1,6 @@
-#include <stdexcept>
 #include <iostream>
 #include <Fallout/Game/Engine.hpp>
+#include <Ext/Core/RuntimeError.hpp>
 
 int main(int argc, char* argv[])
 {
@@ -14,7 +14,7 @@ int main(int argc, char* argv[])
 		Fallout::Game::Engine engine(&settings);
 		engine.Run();
 	}
-	catch (const std::runtime_error& error)
+	catch (const Ext::Core::RuntimeError& error)
 	{
 		std::cout << error.what() << '\n';
 	}

@@ -83,12 +83,12 @@ RAPIDJSON_DIAG_OFF(effc++)
     #define RAPIDJSON_PARSE_ERROR_NORETURN(parseErrorCode,offset) \
        throw ParseException(parseErrorCode, #parseErrorCode, offset)
 
-    #include <stdexcept>               // std::runtime_error
+    #include <stdexcept>               // Ext::Core::RuntimeError
     #include "rapidjson/error/error.h" // rapidjson::ParseResult
 
-    struct ParseException : std::runtime_error, rapidjson::ParseResult {
+    struct ParseException : Ext::Core::RuntimeError, rapidjson::ParseResult {
       ParseException(rapidjson::ParseErrorCode code, const char* msg, size_t offset)
-        : std::runtime_error(msg), ParseResult(code, offset) {}
+        : Ext::Core::RuntimeError(msg), ParseResult(code, offset) {}
     };
 
     #include "rapidjson/reader.h"

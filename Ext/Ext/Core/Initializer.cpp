@@ -2,20 +2,20 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include <SDL_ttf.h>
-#include <stdexcept>
+#include <Ext/Core/RuntimeError.hpp>
 
 Ext::Core::Initializer::Initializer()
 {
 	if (SDL_Init(SDL_INIT_EVERYTHING) != 0)
-		throw std::runtime_error(SDL_GetError());
+		throw Ext::Core::RuntimeError(SDL_GetError());
 
 	int flags = IMG_INIT_JPG | IMG_INIT_PNG;
 
 	if ((IMG_Init(flags) & flags) != flags)
-		throw std::runtime_error(IMG_GetError());
+		throw Ext::Core::RuntimeError(IMG_GetError());
 
 	if (TTF_Init() != 0)
-		throw std::runtime_error(TTF_GetError());
+		throw Ext::Core::RuntimeError(TTF_GetError());
 }
 
 Ext::Core::Initializer::~Initializer()

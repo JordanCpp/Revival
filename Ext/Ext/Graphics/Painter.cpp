@@ -3,7 +3,7 @@
 #include "Painter.hpp"
 #include "Painter.hpp"
 #include <Ext/Graphics/Painter.hpp>
-#include <stdexcept>
+#include <Ext/Core/RuntimeError.hpp>
 
 Ext::Graphics::Painter::Painter(Ext::Graphics::Render* render) :
 	_Render(render)
@@ -22,7 +22,7 @@ void Ext::Graphics::Painter::Draw(Ext::Graphics::Image* image, const Ext::Graphi
 	int success = SDL_RenderCopy(_Render->Get(), image->Get(), nullptr, &rect);
 
 	if (success != 0)
-		throw std::runtime_error(SDL_GetError());
+		throw Ext::Core::RuntimeError(SDL_GetError());
 }
 
 void Ext::Graphics::Painter::Draw(Ext::Graphics::Image* image, const Ext::Graphics::Point2u& pos)
