@@ -4,8 +4,8 @@ project(Ext)
 
 if (MSVC)
   add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/utf-8>")
-  add_subdirectory("dependencies/SDL-release-2.24.0")
-  include_directories("dependencies/SDL-release-2.24.0/include")
+  add_subdirectory("dependencies/SDL2-2.0.22")
+  include_directories("dependencies/SDL2-2.0.22/include")
   add_subdirectory("dependencies/SDL_image-release-2.6.2")
   include_directories("dependencies/SDL_image-release-2.6.2")
   add_subdirectory("dependencies/SDL_ttf-release-2.20.1")
@@ -68,3 +68,5 @@ add_executable(Fallout
 "Sources/Fallout/UI/Settings.cpp")
 
 target_link_libraries(Fallout Ext)
+
+add_subdirectory("Ext/Test")

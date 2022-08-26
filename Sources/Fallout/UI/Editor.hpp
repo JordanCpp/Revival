@@ -18,6 +18,8 @@ namespace Fallout
             Ext::Widgets::Application* _Application;
             Ext::Widgets::Screen* _Screen;
             Ext::Widgets::Window* _Window;
+            Ext::Widgets::Button* _ScaleInc;
+            Ext::Widgets::Button* _ScaleDec;
         };
     }
 }
