@@ -4,6 +4,7 @@
 #include <Ext/Widgets/Screen.hpp>
 #include <Ext/Events/Event.hpp>
 #include <Ext/Input/MouseInput.hpp>
+#include <unordered_map>
 
 namespace Ext
 {
@@ -12,13 +13,15 @@ namespace Ext
         class Application
         {
         public:
-            void Activate(Ext::Widgets::Screen* screen);
+            void Activate(size_t id);
+            void Attach(size_t id, Ext::Widgets::Screen* screen);
             void Draw();
             void Handler(const Ext::Events::Event& event);
         private:
             Ext::Input::MouseInput _MouseInput;
             Ext::Widgets::Screen* _Screen;
             Ext::Widgets::Widget* _Current;
+            std::unordered_map<size_t, Ext::Widgets::Screen*> _Screens;
         };
     }
 }

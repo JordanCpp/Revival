@@ -11,6 +11,9 @@
 #include <Fallout/Managers/ImageManager.hpp>
 #include <Ext/Managers/FontManager.hpp>
 #include <Ext/Managers/TextManager.hpp>
+#include <Fallout/UI/Screens.hpp>
+#include <Fallout/UI/Editor.hpp>
+#include <Fallout/UI/Settings.hpp>
 
 namespace Fallout
 {
@@ -38,9 +41,9 @@ namespace Fallout
             Ext::Managers::FontManager _FontManager;
             Ext::Loaders::TextLoader _TextLoader;
             Ext::Managers::TextManager _TextManager;
-
-
-            Fallout::UI::MainMenu _MainMenu;
+            Fallout::UI::MainMenu _UiMainMenu;
+            Fallout::UI::Editor _UiEditor;
+            Fallout::UI::Settings _UiSettings;
         };
     }
 }

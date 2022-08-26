@@ -4,6 +4,7 @@
 #include <Ext/Widgets/Application.hpp>
 #include <Ext/Managers/WidgetManager.hpp>
 #include <Fallout/Managers/ImageManager.hpp>
+#include <Fallout/UI/Screens.hpp>
 
 namespace Fallout
 {

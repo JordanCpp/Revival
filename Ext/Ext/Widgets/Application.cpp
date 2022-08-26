@@ -1,10 +1,24 @@
-#include "Application.hpp"
 #include <Ext/Widgets/Application.hpp>
 #include <stdexcept>
 
-void Ext::Widgets::Application::Activate(Ext::Widgets::Screen* screen)
+void Ext::Widgets::Application::Activate(size_t id)
 {
-	_Screen = screen;
+	auto ptr = _Screens.find(id);
+
+	if (ptr == _Screens.end())
+		throw std::runtime_error("Not find id: " + std::to_string(id));
+
+	_Screen = ptr->second;
+}
+
+void Ext::Widgets::Application::Attach(size_t id, Ext::Widgets::Screen* screen)
+{
+	auto ptr = _Screens.find(id);
+
+	if (ptr != _Screens.end())
+		throw std::runtime_error("Redefinition id: " + std::to_string(id));
+
+	_Screens.emplace(id, screen);
 }
 
 void Ext::Widgets::Application::Draw()

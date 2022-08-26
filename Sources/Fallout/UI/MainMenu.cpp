@@ -36,7 +36,7 @@ void Fallout::UI::MainMenu::NewGame(const Ext::Graphics::Point2u& pos)
 
 void Fallout::UI::MainMenu::Editor(const Ext::Graphics::Point2u& pos)
 {
-	std::cout << "Editor" << '\n';
+	_Application->Activate(Fallout::UI::Screens::Editor);
 }
 
 void Fallout::UI::MainMenu::Exit(const Ext::Graphics::Point2u& pos)
