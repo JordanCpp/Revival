@@ -1,4 +1,5 @@
 #include <Fallout/Game/Settings.hpp>
+#include "Settings.hpp"
 
 const Ext::Graphics::Point2u& Fallout::Game::Settings::Size()
 {

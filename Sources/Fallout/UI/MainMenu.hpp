@@ -17,6 +17,7 @@ namespace Fallout
             Ext::Widgets::Screen* Screen();
             void NewGame(const Ext::Graphics::Point2u& pos);
             void Editor(const Ext::Graphics::Point2u& pos);
+            void Setting(const Ext::Graphics::Point2u& pos);
             void Exit(const Ext::Graphics::Point2u& pos);
         private:
             Ext::Managers::WidgetManager* _WidgetManager;
@@ -27,6 +28,7 @@ namespace Fallout
             Ext::Widgets::Button* _NewGame;
             Ext::Widgets::Button* _Editor;
             Ext::Widgets::Button* _Exit;
+            Ext::Widgets::Button* _Setting;
         };
     }
 }

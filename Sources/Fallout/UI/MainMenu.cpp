@@ -19,7 +19,11 @@ Fallout::UI::MainMenu::MainMenu(Ext::Managers::WidgetManager* widgetManager, Ext
 	_Editor->OnClick = std::bind(&MainMenu::Editor, this, std::placeholders::_1);
 	_Window->Attach(_Editor);
 
-	_Exit = _WidgetManager->NewButton("Exit", Ext::Graphics::Point2u(5, 85), Ext::Graphics::Point2u(145, 35));
+	_Setting = _WidgetManager->NewButton("Setting", Ext::Graphics::Point2u(5, 85), Ext::Graphics::Point2u(145, 35));
+	_Setting->OnClick = std::bind(&MainMenu::Setting, this, std::placeholders::_1);
+	_Window->Attach(_Setting);
+
+	_Exit = _WidgetManager->NewButton("Exit", Ext::Graphics::Point2u(5, 125), Ext::Graphics::Point2u(145, 35));
 	_Exit->OnClick = std::bind(&MainMenu::Exit, this, std::placeholders::_1);
 	_Window->Attach(_Exit);
 }
@@ -37,6 +41,11 @@ void Fallout::UI::MainMenu::NewGame(const Ext::Graphics::Point2u& pos)
 void Fallout::UI::MainMenu::Editor(const Ext::Graphics::Point2u& pos)
 {
 	_Application->Activate(Fallout::UI::Screens::Editor);
+}
+
+void Fallout::UI::MainMenu::Setting(const Ext::Graphics::Point2u& pos)
+{
+	_Application->Activate(Fallout::UI::Screens::Settings);
 }
 
 void Fallout::UI::MainMenu::Exit(const Ext::Graphics::Point2u& pos)

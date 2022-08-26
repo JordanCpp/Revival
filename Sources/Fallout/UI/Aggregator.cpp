@@ -5,10 +5,12 @@ Fallout::UI::Aggregator::Aggregator(Ext::Managers::WidgetManager* widgetManager,
 	_Application(application),
 	_ImageManager(imageManager),
 	_UiMainMenu(_WidgetManager, _Application, _ImageManager),
-	_UiEditor(_WidgetManager, _Application)
+	_UiEditor(_WidgetManager, _Application),
+	_UiSettings(_WidgetManager)
 {
 	_Application->Attach(Fallout::UI::Screens::MainMenu, _UiMainMenu.Screen());
 	_Application->Attach(Fallout::UI::Screens::Editor, _UiEditor.Screen());
+	_Application->Attach(Fallout::UI::Screens::Settings, _UiSettings.Screen());
 
 	_Application->Activate(Fallout::UI::Screens::MainMenu);
 }
