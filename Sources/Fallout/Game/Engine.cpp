@@ -16,12 +16,8 @@ Fallout::Game::Engine::Engine(Fallout::Game::Settings* settings) :
 	_TextLoader(&_ImageLoader, _FontManager.Get("Fonts/", "FalloutRegular.ttf"), Ext::Graphics::Color(0, 0, 0)),
 	_TextManager(&_TextLoader),
 	_WidgetManager(&_Painter, &_Window,&_TextManager),
-	_UiMainMenu(&_WidgetManager, &_Application, &_GameImageManager),
-	_UiEditor(&_WidgetManager, &_Application)
+	_Aggregator(&_WidgetManager, &_Application, &_GameImageManager)
 {
-	_Application.Attach(Fallout::UI::Screens::MainMenu, _UiMainMenu.Screen());
-	_Application.Attach(Fallout::UI::Screens::Editor, _UiEditor.Screen());
-
 	_Application.Activate(Fallout::UI::Screens::MainMenu);
 }
 

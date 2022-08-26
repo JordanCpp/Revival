@@ -62,6 +62,7 @@ add_executable(Fallout
 "Sources/Fallout/Gameplay/StatValue.cpp"
 "Sources/Fallout/Managers/ProtoManager.cpp" 
 "Sources/Fallout/Managers/ImageManager.cpp" 
+"Sources/Fallout/UI/Aggregator.cpp"
 "Sources/Fallout/UI/MainMenu.cpp"
 "Sources/Fallout/UI/Editor.cpp"
 "Sources/Fallout/UI/Settings.cpp")
