@@ -17,6 +17,7 @@ include_directories("Ext/")
 add_library(Ext STATIC 
 "Ext/Ext/Core/Initializer.cpp"
 "Ext/Ext/Core/RuntimeError.cpp"
+"Ext/Ext/Core/Tester.cpp"
 "Ext/Ext/Events/Eventer.cpp"
 "Ext/Ext/Graphics/Window.cpp"
 "Ext/Ext/Graphics/Render.cpp"
