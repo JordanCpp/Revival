@@ -1,13 +1,11 @@
 #include <Ext/Core/Tester.hpp>
+#include <Ext/Core/Initializer.hpp>
 #include <Ext/Loaders/FontLoader.hpp>
-
-void TestExtGraphicsFontInit()
-{
-	EXT_TESTER_EXCEPTION(Ext::Loaders::FontLoader fontLoader);
-}
 
 void TestExtGraphicsFontLoaderLoad()
 {
+	EXT_TESTER_EXCEPTION(Ext::Core::Initializer initializer;);
+
 	Ext::Loaders::FontLoader fontLoader;
 
 	Ext::Graphics::Font* font = nullptr;
@@ -20,7 +18,6 @@ void TestExtGraphicsFontLoaderLoad()
 
 int main(int argc, char* argv[])
 {
-	TestExtGraphicsFontInit();
 	TestExtGraphicsFontLoaderLoad();
 
 	return 0;
