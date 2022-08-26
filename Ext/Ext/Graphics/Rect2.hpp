@@ -41,14 +41,12 @@ namespace Ext
 
 			void Pos(const TYPE& x, const TYPE& y)
 			{
-				_Pos._PosX = x;
-				_Pos._PosY = y;
+				_Pos.Pos(x, y);
 			}
 
 			void Size(const TYPE& x, const TYPE& y)
 			{
-				_Size._PosX = x;
-				_Size._PosY = y;
+				_Size.Pos(x, y);
 			}
 
 			bool Contains(const Ext::Graphics::Point2<TYPE>& pos) const
