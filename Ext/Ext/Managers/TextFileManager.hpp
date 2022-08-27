@@ -15,6 +15,8 @@ namespace Ext
             TextFileManager(Ext::Managers::PathManager* pathManager, Ext::Loaders::TextFileLoader* textFileLoader);
             ~TextFileManager();
             Ext::Formats::TextFile* Get(const std::string& dir1, const std::string& dir2, const std::string& dir3, const std::string& file);
+            Ext::Formats::TextFile* Get(const std::string& dir1, const std::string& dir2, const std::string& file);
+            Ext::Formats::TextFile* Get(const std::string& dir1, const std::string& file);
         private:
             Ext::Managers::PathManager* _PathManager;
             Ext::Loaders::TextFileLoader* _TextFileLoader;

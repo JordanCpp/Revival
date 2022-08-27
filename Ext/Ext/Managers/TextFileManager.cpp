@@ -32,3 +32,13 @@ Ext::Formats::TextFile* Ext::Managers::TextFileManager::Get(const std::string& d
 
     return p;
 }
+
+Ext::Formats::TextFile* Ext::Managers::TextFileManager::Get(const std::string& dir1, const std::string& dir2, const std::string& file)
+{
+    return Get(dir1, dir2, "", file);
+}
+
+Ext::Formats::TextFile* Ext::Managers::TextFileManager::Get(const std::string& dir1, const std::string& file)
+{
+    return Get(dir1, "", "", file);
+}
