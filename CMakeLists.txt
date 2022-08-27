@@ -54,8 +54,7 @@ target_link_libraries(Ext SDL2main SDL2 SDL2_image SDL2_ttf)
 
 include_directories("Sources/")
 
-add_executable(Fallout 
-"Sources/Fallout/main.cpp"
+add_library(FalloutLibrary STATIC
 "Sources/Fallout/Game/Engine.cpp"
 "Sources/Fallout/Game/Settings.cpp"
 "Sources/Fallout/Game/Critter.cpp"
@@ -68,8 +67,14 @@ add_executable(Fallout
 "Sources/Fallout/UI/Aggregator.cpp"
 "Sources/Fallout/UI/MainMenu.cpp"
 "Sources/Fallout/UI/Editor.cpp"
-"Sources/Fallout/UI/Settings.cpp")
+"Sources/Fallout/UI/Settings.cpp"
+"Sources/Fallout/Critters/Critter.cpp"
+"Sources/Fallout/Critters/Script.cpp"
+"Sources/Fallout/Critters/Stats.cpp")
 
-target_link_libraries(Fallout Ext)
+add_executable(Fallout "Sources/Fallout/main.cpp")
+
+target_link_libraries(Fallout FalloutLibrary Ext)
 
 add_subdirectory("Ext/Test")
+add_subdirectory("Sources/Fallout/Test")

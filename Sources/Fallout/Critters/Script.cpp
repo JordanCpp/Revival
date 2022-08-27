@@ -1,0 +1,1 @@
+#include <Fallout/Critters/Script.hpp>
