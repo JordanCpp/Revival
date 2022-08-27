@@ -8,7 +8,7 @@ namespace Fallout
         class Modifier
         {
         public:
-            int PercentOf(int percent, int value);
+            int PercentOf(int percent, int value) const;
         private:
         };
     }
