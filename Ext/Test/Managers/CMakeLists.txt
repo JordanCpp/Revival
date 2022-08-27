@@ -11,3 +11,6 @@ target_link_libraries(FontManager Ext)
 
 add_executable(TextManager "TextManager.cpp")
 target_link_libraries(TextManager Ext)
+
+add_executable(ImageManager "ImageManager.cpp")
+target_link_libraries(ImageManager Ext)
