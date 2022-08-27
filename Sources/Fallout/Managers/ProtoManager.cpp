@@ -7,7 +7,7 @@ Fallout::Managers::ProtoManager::ProtoManager(Ext::Managers::TextFileManager* te
 {
 }
 
-const Fallout::Game::CritterProto& Fallout::Managers::ProtoManager::Proto(const std::string& file)
+const Fallout::Critters::Proto& Fallout::Managers::ProtoManager::Proto(const std::string& file)
 {
 	return	_CritterProto;
 }

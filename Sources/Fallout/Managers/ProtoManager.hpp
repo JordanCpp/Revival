@@ -3,7 +3,7 @@
 
 #include <Ext/Readers/JsonReader.hpp>
 #include <Ext/Managers/TextFileManager.hpp>
-#include <Fallout/Game/CritterProto.hpp>
+#include <Fallout/Critters/Proto.hpp>
 
 namespace Fallout
 {
@@ -13,11 +13,11 @@ namespace Fallout
         {
         public:
             ProtoManager(Ext::Managers::TextFileManager* textFileLoader, Ext::Readers::JsonReader* jsonReader);
-            const Fallout::Game::CritterProto& Proto(const std::string& file);
+            const Fallout::Critters::Proto& Proto(const std::string& file);
         private:
             Ext::Managers::TextFileManager* _TextFileManager;
             Ext::Readers::JsonReader* _JsonReader;
-            Fallout::Game::CritterProto _CritterProto;
+            Fallout::Critters::Proto _CritterProto;
         };
     }
 }
