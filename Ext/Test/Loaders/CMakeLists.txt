@@ -5,3 +5,6 @@ target_link_libraries(FontLoader Ext)
 
 add_executable(ImageLoader "ImageLoader.cpp")
 target_link_libraries(ImageLoader Ext)
+
+add_executable(TextLoader "TextLoader.cpp")
+target_link_libraries(TextLoader Ext)
