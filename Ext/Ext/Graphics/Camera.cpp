@@ -22,5 +22,5 @@ void Ext::Graphics::Camera::Pos(const Ext::Graphics::Point2u& pos)
 
 void Ext::Graphics::Camera::Size(const Ext::Graphics::Point2u& size)
 {
-	_Area.Pos(size.PosX(), size.PosY());
+	_Area.Size(size.PosX(), size.PosY());
 }

@@ -11,3 +11,6 @@ target_link_libraries(Color Ext)
 
 add_executable(Window "Window.cpp")
 target_link_libraries(Window Ext)
+
+add_executable(Camera "Camera.cpp")
+target_link_libraries(Camera Ext)
