@@ -8,3 +8,6 @@ target_link_libraries(TextFileManager Ext)
 
 add_executable(FontManager "FontManager.cpp")
 target_link_libraries(FontManager Ext)
+
+add_executable(TextManager "TextManager.cpp")
+target_link_libraries(TextManager Ext)
