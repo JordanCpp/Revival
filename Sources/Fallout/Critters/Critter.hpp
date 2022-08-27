@@ -2,6 +2,7 @@
 #define Fallout_Critters_Critter_hpp
 
 #include <Fallout/Critters/Script.hpp>
+#include <Fallout/Critters/Proto.hpp>
 
 namespace Fallout
 {
