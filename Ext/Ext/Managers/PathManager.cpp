@@ -1,8 +1,14 @@
+#include "PathManager.hpp"
 #include <Ext/Managers/PathManager.hpp>
 
 Ext::Managers::PathManager::PathManager(const std::string& root) :
 	_Root(root)
 {
+}
+
+const std::string& Ext::Managers::PathManager::Root()
+{
+	return _Root;
 }
 
 const std::string& Ext::Managers::PathManager::Path(const std::string& dir1, const std::string& dir2, const std::string& dir3, const std::string& file)

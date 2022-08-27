@@ -11,6 +11,7 @@ namespace Ext
         {
         public:
             PathManager(const std::string& root);
+            const std::string& Root();
             const std::string& Path(const std::string& dir1, const std::string& dir2, const std::string& dir3, const std::string& file);
             const std::string& Path(const std::string& dir1, const std::string& dir2, const std::string& file);
             const std::string& Path(const std::string& dir1, const std::string& file);
