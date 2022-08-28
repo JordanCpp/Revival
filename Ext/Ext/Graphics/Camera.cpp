@@ -1,5 +1,9 @@
 #include <Ext/Graphics/Camera.hpp>
 
+Ext::Graphics::Camera::Camera()
+{
+}
+
 Ext::Graphics::Camera::Camera(const Ext::Graphics::Point2u& pos, const Ext::Graphics::Point2u& size) :
 	_Area(pos, size)
 {

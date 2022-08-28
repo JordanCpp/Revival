@@ -11,6 +11,7 @@ namespace Ext
 		class Camera
 		{
 		public:
+			Camera();
 			Camera(const Ext::Graphics::Point2u& pos, const Ext::Graphics::Point2u& size);
 			const Ext::Graphics::Point2u& Pos();
 			const Ext::Graphics::Point2u& Size();
