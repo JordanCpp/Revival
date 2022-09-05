@@ -13,8 +13,13 @@ namespace Ext
         public:
             void Parse(const std::string& source);
             rapidjson::Document* Reader();
+            const char* String(const std::string& member);
+            int Integer(const std::string& member);
+            double Double(const std::string& member);
+            bool Boolean(const std::string& member);
         private:
             rapidjson::Document _Document;
+            std::string _MemberFix;
         };
     }
 }

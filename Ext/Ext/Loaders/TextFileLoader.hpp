@@ -13,7 +13,7 @@ namespace Ext
         public:
             Ext::Formats::TextFile* Load(const std::string& path);
         private:
-            std::fstream _Input;
+            std::ifstream _Input;
             std::string _Result;
         };
     }

@@ -1,0 +1,6 @@
+{
+  "Integer": 42,
+  "Double": 36.6,
+  "Boolean": "true",
+  "String": "Hello, i am String!"
+}

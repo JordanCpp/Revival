@@ -9,7 +9,7 @@ void TestExtManagersTextManager()
 
 	Ext::Formats::TextFile* textFile = textFileManager.Get("TestFiles/", "TextFile.txt");
 	EXT_TESTER_EQUAL(textFile != nullptr);
-	EXT_TESTER_EQUAL(textFile->Content() == "String1\nString2\nString3");
+	EXT_TESTER_EQUAL(textFile->Content() == "String1\nString2\nString3\n");
 }
 
 int main(int argc, char* argv[])

@@ -15,6 +15,7 @@ namespace Fallout
         public:
         private:
             Fallout::Critters::Script* _Script;
+            Fallout::Critters::Proto _Proto;
         };
     }
 }
