@@ -24,7 +24,10 @@ Ext::Formats::TextFile* Ext::Managers::TextFileManager::Get(const std::string& d
 
     if (i == _TextFiles.end())
     {
-        p = _TextFileLoader->Load(path);
+        _TextFileLoader->Load(path);
+
+        p = new Ext::Formats::TextFile(_TextFileLoader->Result());
+
         _TextFiles.emplace(path, p);
     }
     else

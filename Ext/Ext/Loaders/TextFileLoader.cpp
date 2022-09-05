@@ -1,7 +1,7 @@
 #include <Ext/Loaders/TextFileLoader.hpp>
 #include <Ext/Core/RuntimeError.hpp>
 
-Ext::Formats::TextFile* Ext::Loaders::TextFileLoader::Load(const std::string& path)
+void Ext::Loaders::TextFileLoader::Load(const std::string& path)
 {
 	_Input.open(path, std::ios::in);
 
@@ -17,6 +17,9 @@ Ext::Formats::TextFile* Ext::Loaders::TextFileLoader::Load(const std::string& pa
 	}
 
 	_Input.close();
+}
 
-	return new Ext::Formats::TextFile(_Result);
+const std::string& Ext::Loaders::TextFileLoader::Result()
+{
+	return _Result;
 }
