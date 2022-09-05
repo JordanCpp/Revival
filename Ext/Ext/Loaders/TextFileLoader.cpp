@@ -10,11 +10,9 @@ Ext::Formats::TextFile* Ext::Loaders::TextFileLoader::Load(const std::string& pa
 	
 	_Result.clear();
 
-	std::string line;
-
-	while (getline(_Input, line))
+	while (getline(_Input, _Line))
 	{
-		_Result += line;
+		_Result += _Line;
 		_Result += '\n';
 	}
 
