@@ -15,11 +15,16 @@ namespace Fallout
         class Aggregator
         {
         public:
-            Aggregator(Ext::Managers::WidgetManager* widgetManager, Ext::Widgets::Application* application, Fallout::Managers::ImageManager* imageManager);
+            Aggregator(
+                Ext::Managers::WidgetManager* widgetManager, 
+                Ext::Widgets::Application* application, 
+                Fallout::Managers::ImageManager* imageManager,
+                Ext::Managers::LocalizationFileManager* localizationFileManager);
         private:
             Ext::Managers::WidgetManager* _WidgetManager;
             Ext::Widgets::Application* _Application;
             Fallout::Managers::ImageManager* _ImageManager;
+            Ext::Managers::LocalizationFileManager* _LocalizationFileManager;
             Fallout::UI::MainMenu _UiMainMenu;
             Fallout::UI::Editor _UiEditor;
             Fallout::UI::Settings _UiSettings;

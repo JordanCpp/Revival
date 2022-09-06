@@ -1,10 +1,15 @@
 #include <Fallout/UI/Aggregator.hpp>
 
-Fallout::UI::Aggregator::Aggregator(Ext::Managers::WidgetManager* widgetManager, Ext::Widgets::Application* application, Fallout::Managers::ImageManager* imageManager) :
+Fallout::UI::Aggregator::Aggregator(
+	Ext::Managers::WidgetManager* widgetManager, 
+	Ext::Widgets::Application* application, 
+	Fallout::Managers::ImageManager* imageManager,
+	Ext::Managers::LocalizationFileManager* localizationFileManager) :
 	_WidgetManager(widgetManager),
 	_Application(application),
 	_ImageManager(imageManager),
-	_UiMainMenu(_WidgetManager, _Application, _ImageManager),
+	_LocalizationFileManager(localizationFileManager),
+	_UiMainMenu(_WidgetManager, _Application, _ImageManager, _LocalizationFileManager),
 	_UiEditor(_WidgetManager, _Application),
 	_UiSettings(_WidgetManager)
 {

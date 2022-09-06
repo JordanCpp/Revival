@@ -39,6 +39,11 @@ namespace Fallout
             Ext::Managers::FontManager _FontManager;
             Ext::Loaders::TextLoader _TextLoader;
             Ext::Managers::TextManager _TextManager;
+            Ext::Loaders::TextFileLoader _TextFileLoader;
+            Ext::Managers::TextFileManager _TextFileManager;
+            Ext::Loaders::LocalizationFileLoader _LocalizationFileLoader;
+            Ext::Readers::JsonReader _LocalizationFileReader;
+            Ext::Managers::LocalizationFileManager _LocalizationFileManager;
             Fallout::UI::Aggregator _Aggregator;
         };
     }

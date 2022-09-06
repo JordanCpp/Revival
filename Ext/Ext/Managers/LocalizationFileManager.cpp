@@ -1,7 +1,7 @@
 #include <Ext/Managers/LocalizationFileManager.hpp>
 
-Ext::Managers::LocalizationFileManager::LocalizationFileManager(Ext::Managers::PathManager* pathManager, Ext::Loaders::LocalizationFileLoader* localizationFileLoader, Ext::Readers::JsonReader* jsonReader) :
-	_PathManager(pathManager),
+Ext::Managers::LocalizationFileManager::LocalizationFileManager(Ext::Managers::TextFileManager* textFileManager, Ext::Loaders::LocalizationFileLoader* localizationFileLoader, Ext::Readers::JsonReader* jsonReader) :
+	_TextFileManager(textFileManager),
 	_LocalizationFileLoader(localizationFileLoader),
     _JsonReader(jsonReader)
 {
@@ -17,7 +17,7 @@ Ext::Managers::LocalizationFileManager::~LocalizationFileManager()
 
 Ext::Formats::LocalizationFile* Ext::Managers::LocalizationFileManager::Get(const std::string& dir1, const std::string& dir2, const std::string& dir3, const std::string& file)
 {
-    const char* path = _PathManager->Path(dir1, dir2, dir3, file).c_str();
+    std::string path = dir1 + dir2 + dir3 + file;
 
     auto i = _LocalizationFiles.find(path);
 
@@ -25,7 +25,7 @@ Ext::Formats::LocalizationFile* Ext::Managers::LocalizationFileManager::Get(cons
 
     if (i == _LocalizationFiles.end())
     {
-        _JsonReader->Parse(path);
+        _JsonReader->Parse(_TextFileManager->Get(dir1, dir2, dir3, file)->Content());
 
         p = _LocalizationFileLoader->Load(_JsonReader);
 

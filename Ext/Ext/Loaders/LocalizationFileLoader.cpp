@@ -6,7 +6,7 @@ Ext::Formats::LocalizationFile* Ext::Loaders::LocalizationFileLoader::Load(Ext::
 
 	for (auto i = reader->Reader()->MemberBegin(); i != reader->Reader()->MemberEnd(); i++)
 	{
-		result->Add(i->name.GetInt(), i->value.GetString());
+		result->Add(i->name.GetString(), i->value.GetString());
 	}
 
 	return result;
