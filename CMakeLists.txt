@@ -33,6 +33,7 @@ add_library(Ext STATIC
 "Ext/Ext/Loaders/TextFileLoader.cpp"
 "Ext/Ext/Loaders/FontLoader.cpp"
 "Ext/Ext/Loaders/TextLoader.cpp"
+"Ext/Ext/Loaders/LocalizationFileLoader.cpp"
 "Ext/Ext/Formats/TextFile.cpp"
 "Ext/Ext/Formats/LocalizationFile.cpp"
 "Ext/Ext/Managers/PathManager.cpp"

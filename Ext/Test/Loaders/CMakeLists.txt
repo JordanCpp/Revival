@@ -8,3 +8,6 @@ target_link_libraries(ImageLoader Ext)
 
 add_executable(TextLoader "TextLoader.cpp")
 target_link_libraries(TextLoader Ext)
+
+add_executable(LocalizationFileLoader "LocalizationFileLoader.cpp")
+target_link_libraries(LocalizationFileLoader Ext)
