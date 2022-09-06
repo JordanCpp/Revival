@@ -14,3 +14,6 @@ target_link_libraries(TextManager Ext)
 
 add_executable(ImageManager "ImageManager.cpp")
 target_link_libraries(ImageManager Ext)
+
+add_executable(LocalizationFileManager "LocalizationFileManager.cpp")
+target_link_libraries(LocalizationFileManager Ext)
