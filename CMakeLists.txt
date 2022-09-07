@@ -66,6 +66,7 @@ add_library(FalloutLibrary STATIC
 "Sources/Fallout/Gameplay/Modifier.cpp"
 "Sources/Fallout/Managers/ProtoManager.cpp" 
 "Sources/Fallout/Managers/ImageManager.cpp" 
+"Sources/Fallout/Managers/LocalizationManager.cpp"
 "Sources/Fallout/UI/Aggregator.cpp"
 "Sources/Fallout/UI/MainMenu.cpp"
 "Sources/Fallout/UI/Editor.cpp"
