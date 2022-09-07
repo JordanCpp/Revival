@@ -35,6 +35,7 @@ namespace Fallout
             void Percent(size_t index, int value);
             int StatValue(size_t index) const;
             int StatCurrent(size_t index) const;
+            void Clear();
         private:
             Fallout::Gameplay::Modifier _Modifier;
             std::array<Fallout::Gameplay::StatValue, Fallout::Critters::Stats::Max> _Stats;

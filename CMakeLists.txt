@@ -74,7 +74,8 @@ add_library(FalloutLibrary STATIC
 "Sources/Fallout/Critters/Critter.cpp"
 "Sources/Fallout/Critters/Script.cpp"
 "Sources/Fallout/Critters/Stats.cpp"
-"Sources/Fallout/Critters/Proto.cpp")
+"Sources/Fallout/Critters/Proto.cpp"
+"Sources/Fallout/Critters/ProtoLoader.cpp")
 
 add_executable(Fallout "Sources/Fallout/main.cpp")
 

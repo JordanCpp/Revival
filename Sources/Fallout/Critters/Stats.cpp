@@ -64,3 +64,14 @@ int Fallout::Critters::Stats::StatCurrent(size_t index) const
 {
     return Current(index);
 }
+
+void Fallout::Critters::Stats::Clear()
+{
+    for (size_t i = 0; i < _Stats.size(); i++)
+    {
+        _Stats.at(i).Value(0);
+        _Stats.at(i).Current(0);
+        _Stats.at(i).Number(0);
+        _Stats.at(i).Percent(0);
+    }
+}
