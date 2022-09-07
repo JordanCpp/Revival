@@ -17,7 +17,8 @@ Fallout::Game::Engine::Engine(Fallout::Game::Settings* settings) :
 	_TextManager(&_TextLoader),
 	_WidgetManager(&_Painter, &_Window,&_TextManager),
 	_LocalizationFileManager(&_PathManager, &_TextFileLoader, &_LocalizationFileLoader, &_LocalizationFileReader),
-	_Aggregator(&_WidgetManager, &_Application, &_GameImageManager, &_LocalizationFileManager)
+	_LocalizationManager(_Settings->Localization(), &_LocalizationFileManager),
+	_Aggregator(&_WidgetManager, &_Application, &_GameImageManager, &_LocalizationManager)
 {
 	_Application.Activate(Fallout::UI::Screens::MainMenu);
 }

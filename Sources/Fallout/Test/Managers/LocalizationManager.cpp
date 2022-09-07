@@ -10,9 +10,7 @@ void TestLocalizationManager()
 
 	Ext::Managers::LocalizationFileManager localizationFileManager(&pathManager, &textFileLoader, &localizationFileLoader, &jsonReader);
 
-	Fallout::Managers::LocalizationManager localizationManager(&localizationFileManager);
-
-	localizationManager.Localization("English");
+	Fallout::Managers::LocalizationManager localizationManager("English" ,&localizationFileManager);
 
 	EXT_TESTER_EQUAL(localizationManager.Localization() == "English");
 

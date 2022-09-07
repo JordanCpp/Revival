@@ -1,3 +1,5 @@
+#include "Settings.hpp"
+#include "Settings.hpp"
 #include <Fallout/Game/Settings.hpp>
 #include "Settings.hpp"
 
@@ -29,4 +31,14 @@ const std::string& Fallout::Game::Settings::Root()
 void Fallout::Game::Settings::Root(const std::string& value)
 {
 	_Root = value;
+}
+
+const std::string& Fallout::Game::Settings::Localization()
+{
+	return _Localization;
+}
+
+void Fallout::Game::Settings::Localization(const std::string& value)
+{
+	_Localization = value;
 }

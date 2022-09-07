@@ -1,6 +1,7 @@
 #include <Fallout/Managers/LocalizationManager.hpp>
 
-Fallout::Managers::LocalizationManager::LocalizationManager(Ext::Managers::LocalizationFileManager* localizationFileManager) :
+Fallout::Managers::LocalizationManager::LocalizationManager(const std::string& localization, Ext::Managers::LocalizationFileManager* localizationFileManager) :
+	_CurrentLocalization(localization),
 	_LocalizationFileManager(localizationFileManager),
 	_CurrentLocalizationFile(nullptr)
 {

@@ -4,8 +4,8 @@
 #include <Ext/Widgets/Application.hpp>
 #include <Ext/Managers/WidgetManager.hpp>
 #include <Fallout/Managers/ImageManager.hpp>
-#include <Ext/Managers/LocalizationFileManager.hpp>
 #include <Fallout/UI/Screens.hpp>
+#include <Fallout/Managers/LocalizationManager.hpp>
 
 namespace Fallout
 {
@@ -18,7 +18,7 @@ namespace Fallout
                 Ext::Managers::WidgetManager* widgetManager, 
                 Ext::Widgets::Application* application, 
                 Fallout::Managers::ImageManager* imageManager,
-                Ext::Managers::LocalizationFileManager* localizationFileManager);
+                Fallout::Managers::LocalizationManager* localizationManager);
 
             Ext::Widgets::Screen* Screen();
             void NewGame(const Ext::Graphics::Point2u& pos);
@@ -29,7 +29,7 @@ namespace Fallout
             Ext::Managers::WidgetManager* _WidgetManager;
             Ext::Widgets::Application* _Application;
             Fallout::Managers::ImageManager* _ImageManager;
-            Ext::Managers::LocalizationFileManager* _LocalizationFileManager;
+            Fallout::Managers::LocalizationManager* _LocalizationManager;
             Ext::Widgets::Screen* _Screen;
             Ext::Widgets::ImageWindow* _Window;
             Ext::Widgets::Button* _NewGame;

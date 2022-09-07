@@ -43,6 +43,7 @@ namespace Fallout
             Ext::Loaders::LocalizationFileLoader _LocalizationFileLoader;
             Ext::Readers::JsonReader _LocalizationFileReader;
             Ext::Managers::LocalizationFileManager _LocalizationFileManager;
+            Fallout::Managers::LocalizationManager _LocalizationManager;
             Fallout::UI::Aggregator _Aggregator;
         };
     }

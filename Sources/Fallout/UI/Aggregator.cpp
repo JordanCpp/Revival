@@ -4,12 +4,12 @@ Fallout::UI::Aggregator::Aggregator(
 	Ext::Managers::WidgetManager* widgetManager, 
 	Ext::Widgets::Application* application, 
 	Fallout::Managers::ImageManager* imageManager,
-	Ext::Managers::LocalizationFileManager* localizationFileManager) :
+	Fallout::Managers::LocalizationManager* localizationManager) :
 	_WidgetManager(widgetManager),
 	_Application(application),
 	_ImageManager(imageManager),
-	_LocalizationFileManager(localizationFileManager),
-	_UiMainMenu(_WidgetManager, _Application, _ImageManager, _LocalizationFileManager),
+	_LocalizationManager(localizationManager),
+	_UiMainMenu(_WidgetManager, _Application, _ImageManager, _LocalizationManager),
 	_UiEditor(_WidgetManager, _Application),
 	_UiSettings(_WidgetManager)
 {

@@ -10,6 +10,7 @@ int main(int argc, char* argv[])
 		settings.Size(Ext::Graphics::Point2u(800, 600));
 		settings.Title("Fallout 2 implementation!");
 		settings.Root("Files/");
+		settings.Localization("Russian");
 
 		Fallout::Game::Engine engine(&settings);
 		engine.Run();

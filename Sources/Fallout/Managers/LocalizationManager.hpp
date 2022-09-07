@@ -10,7 +10,7 @@ namespace Fallout
         class LocalizationManager
         {
         public:
-            LocalizationManager(Ext::Managers::LocalizationFileManager* localizationFileManager);
+            LocalizationManager(const std::string& localization, Ext::Managers::LocalizationFileManager* localizationFileManager);
             void Localization(const std::string& localization);
             const std::string& Localization();
             void File(const std::string& dir1, const std::string& dir2, const std::string& dir3, const std::string& file);

@@ -17,10 +17,13 @@ namespace Fallout
             void Title(const std::string& value);
             const std::string& Root();
             void Root(const std::string& value);
+            const std::string& Localization();
+            void Localization(const std::string& value);
         private:
             Ext::Graphics::Point2u _Size;
             std::string _Title;
             std::string _Root;
+            std::string _Localization;
         };
     }
 }
