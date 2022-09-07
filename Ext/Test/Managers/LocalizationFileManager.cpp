@@ -5,13 +5,10 @@ void TestLocalizationFileManager()
 {
 	Ext::Managers::PathManager pathManager("");
 	Ext::Loaders::TextFileLoader textFileLoader;
-
-	Ext::Managers::TextFileManager textFileManager(&pathManager, &textFileLoader);
 	Ext::Readers::JsonReader jsonReader;
-
 	Ext::Loaders::LocalizationFileLoader localizationFileLoader;
 
-	Ext::Managers::LocalizationFileManager localizationFileManager(&textFileManager, &localizationFileLoader, &jsonReader);
+	Ext::Managers::LocalizationFileManager localizationFileManager(&pathManager , &textFileLoader, &localizationFileLoader, &jsonReader);
 
 	Ext::Formats::LocalizationFile* localizationFile = localizationFileManager.Get("TestFiles/", "Text.json");
 
