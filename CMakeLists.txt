@@ -29,6 +29,7 @@ add_library(Ext STATIC
 "Ext/Ext/Graphics/Font.cpp"
 "Ext/Ext/Graphics/Text.cpp"
 "Ext/Ext/Graphics/Camera.cpp"
+"Ext/Ext/Graphics/Isometric.cpp"
 "Ext/Ext/Loaders/ImageLoader.cpp"
 "Ext/Ext/Loaders/TextFileLoader.cpp"
 "Ext/Ext/Loaders/FontLoader.cpp"
