@@ -2,7 +2,7 @@
 #define Fallout_Critters_Stats_hpp
 
 #include <array>
-#include <Fallout/Gameplay/StatValue.hpp>
+#include <Fallout/Gameplay/Param.hpp>
 #include <Fallout/Gameplay/Modifier.hpp>
 
 namespace Fallout
@@ -38,7 +38,7 @@ namespace Fallout
             void Clear();
         private:
             Fallout::Gameplay::Modifier _Modifier;
-            std::array<Fallout::Gameplay::StatValue, Fallout::Critters::Stats::Max> _Stats;
+            std::array<Fallout::Gameplay::Param<int>, Fallout::Critters::Stats::Max> _Stats;
         };
     }
 }

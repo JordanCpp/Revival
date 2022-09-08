@@ -60,7 +60,6 @@ include_directories("Sources/")
 add_library(FalloutLibrary STATIC
 "Sources/Fallout/Game/Engine.cpp"
 "Sources/Fallout/Game/Settings.cpp"
-"Sources/Fallout/Gameplay/StatValue.cpp"
 "Sources/Fallout/Gameplay/Perk.cpp"
 "Sources/Fallout/Gameplay/Attribute.cpp"
 "Sources/Fallout/Gameplay/Modifier.cpp"
