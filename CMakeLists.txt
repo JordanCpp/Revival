@@ -64,6 +64,7 @@ add_library(FalloutLibrary STATIC
 "Sources/Fallout/Gameplay/Perk.cpp"
 "Sources/Fallout/Gameplay/Attribute.cpp"
 "Sources/Fallout/Gameplay/Modifier.cpp"
+"Sources/Fallout/Gameplay/ParamValue.cpp"
 "Sources/Fallout/Managers/ProtoManager.cpp" 
 "Sources/Fallout/Managers/ImageManager.cpp" 
 "Sources/Fallout/Managers/LocalizationManager.cpp"
@@ -75,7 +76,12 @@ add_library(FalloutLibrary STATIC
 "Sources/Fallout/Critters/Script.cpp"
 "Sources/Fallout/Critters/Stats.cpp"
 "Sources/Fallout/Critters/Proto.cpp"
-"Sources/Fallout/Critters/ProtoLoader.cpp")
+"Sources/Fallout/Critters/ProtoLoader.cpp"
+"Sources/Fallout/Tiles/Tile.cpp"
+"Sources/Fallout/Tiles/Proto.cpp"
+"Sources/Fallout/Tiles/ProtoLoader.cpp"
+"Sources/Fallout/Locations/Location.cpp"
+"Sources/Fallout/Locations/Data.cpp")
 
 add_executable(Fallout "Sources/Fallout/main.cpp")
 

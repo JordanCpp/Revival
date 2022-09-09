@@ -1,4 +1,6 @@
 #include <Fallout/Critters/Proto.hpp>
+#include "Proto.hpp"
+#include "Proto.hpp"
 
 void Fallout::Critters::Proto::Stat(size_t index, int value)
 {
