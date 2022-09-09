@@ -1,58 +1,36 @@
 #ifndef Fallout_Gameplay_Param_hpp
 #define Fallout_Gameplay_Param_hpp
 
+#include <Fallout/Gameplay/ParamValue.hpp>
+
 namespace Fallout
 {
     namespace Gameplay
     {
-        template <typename TYPE>
         class Param
         {
         public:
-            Param() :
-                _Value(TYPE()),
-                _Current(TYPE()),
-                _Number(TYPE()),
-                _Percent(TYPE())
-            {
-            }
-            TYPE Value() const
-            {
-                return _Value;
-            }
-            TYPE Current() const
-            {
-                return _Current;
-            }
-            TYPE Number() const
-            {
-                return _Number;
-            }
-            TYPE Percent() const
-            {
-                return _Percent;
-            }
-            void Value(TYPE value)
-            {
-                _Value = value;
-            }
-            void Current(TYPE value)
-            {
-                _Current = value;
-            }
-            void Number(TYPE value)
-            {
-                _Number = value;
-            }
-            void Percent(TYPE value)
-            {
-                _Percent = value;
-            }
+            Param();
+            int Valuei() const;
+            float Valuef() const;
+            int Currenti() const;
+            float Currentf() const;
+            int Numberi() const;
+            float Numberf() const;
+            int Percent() const;
+            void Value(int value);
+            void Value(float value);
+            void Current(int value);
+            void Current(float value);
+            void Number(int value);
+            void Number(float value);
+            void Percent(int value);
+            void Change(uint8_t type);
         private:
-            TYPE _Value;
-            TYPE _Current;
-            TYPE _Number;
-            TYPE _Percent;
+            ParamValue _Value;
+            ParamValue _Current;
+            ParamValue _Number;
+            int _Percent;
         };
     }
 }

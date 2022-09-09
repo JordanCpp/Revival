@@ -64,6 +64,7 @@ add_library(FalloutLibrary STATIC
 "Sources/Fallout/Gameplay/Perk.cpp"
 "Sources/Fallout/Gameplay/Attribute.cpp"
 "Sources/Fallout/Gameplay/Modifier.cpp"
+"Sources/Fallout/Gameplay/Param.cpp"
 "Sources/Fallout/Gameplay/ParamValue.cpp"
 "Sources/Fallout/Managers/ProtoManager.cpp" 
 "Sources/Fallout/Managers/ImageManager.cpp" 

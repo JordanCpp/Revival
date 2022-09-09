@@ -1,15 +1,23 @@
 #include <Fallout/Critters/Proto.hpp>
-#include "Proto.hpp"
-#include "Proto.hpp"
+
+int Fallout::Critters::Proto::Stat(size_t index)
+{
+	return _Stats.Value(index);
+}
+
+float Fallout::Critters::Proto::Statf(size_t index)
+{
+	return _Stats.Valuef(index);
+}
 
 void Fallout::Critters::Proto::Stat(size_t index, int value)
 {
 	_Stats.Value(index, value);
 }
 
-int Fallout::Critters::Proto::Stat(size_t index)
+void Fallout::Critters::Proto::Stat(size_t index, float value)
 {
-	return _Stats.Value(index);
+	_Stats.Value(index, value);
 }
 
 void Fallout::Critters::Proto::Clear()

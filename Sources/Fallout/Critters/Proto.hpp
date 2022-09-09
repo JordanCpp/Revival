@@ -10,8 +10,10 @@ namespace Fallout
         class Proto
         {
         public:
-            void Stat(size_t index, int value);
             int Stat(size_t index);
+            float Statf(size_t index);
+            void Stat(size_t index, int value);
+            void Stat(size_t index, float value);
             void Clear();
         private:
             Fallout::Critters::Stats _Stats;

@@ -11,3 +11,6 @@ target_link_libraries(Attribute FalloutLibrary Ext)
 
 add_executable(Perk "Perk.cpp")
 target_link_libraries(Perk FalloutLibrary Ext)
+
+add_executable(ParamValue "ParamValue.cpp")
+target_link_libraries(ParamValue FalloutLibrary Ext)

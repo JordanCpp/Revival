@@ -9,6 +9,7 @@ namespace Fallout
         {
         public:
             int PercentOf(int percent, int value) const;
+            float PercentOf(int percent, float value) const;
         private:
         };
     }
