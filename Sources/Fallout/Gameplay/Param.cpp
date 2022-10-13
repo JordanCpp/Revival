@@ -80,5 +80,4 @@ void Fallout::Gameplay::Param::Percent(int value)
 
 void Fallout::Gameplay::Param::Change(uint8_t type)
 {
-    Change(type);
 }

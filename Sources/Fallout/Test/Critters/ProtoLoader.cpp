@@ -6,15 +6,15 @@ void TestProtoLoader()
 {
 	Ext::Loaders::TextFileLoader textFileLoader;
 
-	textFileLoader.Load("Files/Prototypes/Critters/Tester.json");
+	EXT_TESTER_EXCEPTION(textFileLoader.Load("Files/Prototypes/Critters/Tester.json"));
 
 	Ext::Readers::JsonReader jsonReader;
 
-	jsonReader.Parse(textFileLoader.Result());
+	EXT_TESTER_EXCEPTION(jsonReader.Parse(textFileLoader.Result()));
 
 	Fallout::Critters::ProtoLoader protoLoader;
 
-	protoLoader.Load(&jsonReader);
+	EXT_TESTER_EXCEPTION(protoLoader.Load(&jsonReader));
 
 	Fallout::Critters::Proto proto = protoLoader.Result();
 
